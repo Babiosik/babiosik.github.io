@@ -1,57 +1,555 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>NASA Space Apps Challenge</title>
-		<style>
-			body { margin: 0; }
-			canvas { width: 100%; height: 100% }
-			.hud {
-				z-index: 100;
-				position: fixed;
-				top: 0; bottom: 0;
-				left: 0; right: 0;
-			}
-			.fuel {
-				position: fixed;
-				width: 200px;
-				height: 20px;
-				border-radius: 10px;
-				right: 10px;
-				top: 10px;
-				background-color: beige;
-			}
-			.fuelCurr {
-				border-radius: 10px;
-				margin: 2px;
-				width: calc(100% - 4px);
-				height: calc(100% - 4px);
-				background-color: darkblue;
-				float: right;
-			}
-			.deathScreen {
-				position: relative;
-				width: 400px;
-				height: 200px;
-				border-radius: 30px;
-				margin: auto;
-				top: 30%;
-				background-color: rgba(221, 0, 18, 0.3);
-				text-align: center;
-				line-height: 200px;
-				color: white;
-				font-size: 40px;
-				display: none;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="hud">
-			<div class="fuel">
-				<div class="fuelCurr"></div>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio – Games & Flutter</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style src="index.css"></style>
+</head>
+
+<body>
+	<header>
+		<h1>Mykola</h1>
+		<p>Unity & Production-grade Flutter apps</p>
+	</header>
+
+	<!--
+	<div class="tabs">
+		<div class="tab active" onclick="switchTab(event, 'unity')">Unity Projects</div>
+		<div class="tab" onclick="switchTab(event, 'flutter')">Flutter Projects</div>
+	</div>
+	-->
+
+	<div class="content">
+		<!--  Unity  -->
+		<div id="unity" class="pane active">
+
+			<div class="card">
+				<h2>Unity Developer, Octo Games</h2>
+				<div class="meta">October 2023 - July 2025</div>
+				<ul>
+					<p class="desc">
+						Developed visual novels on Steam using Unity (C#). Responsible for all technical aspects of the
+						game and preparing builds for release.
+					</p>
+					<p class="desc">
+						Led four simultaneous teams. Monitored deadlines and workload for additional staff.
+					</p>
+					<p class="stack">
+						Stack: Unity (C#), Steamworks.NET, Naninovel.
+					</p>
+					<li>Lust Horizon - card collection game like a Heartstone. Implement third-party SDK with native
+						bridge, WebGL development, hard optimisation with addressables, multi-threading.
+						<span data-imgages=""></span>
+					</li>
+					<li>SEX Route 69 - significant improvement in mini-games with races.
+						<span data-imgages="./images\OctoGames\route-1.jpg"></span>
+					</li>
+					<li>SEX Sport College - polishing previous features.
+						<span data-imgages="
+							./images\OctoGames\college-1.jpg,
+							./images\OctoGames\college-2.jpg,
+							./images\OctoGames\college-3.gif"></span>
+					</li>
+					<li>Sex, Camera, Action! - integrate simple cooking minigame.
+						<span data-imgages="./images\OctoGames\camera-action-1.jpg"></span>
+					</li>
+					<li>Hot & Lewd: Miami - integrate racing minigame like a Gran Turismo.
+						<span data-imgages="
+							./images\OctoGames\maiami-1.jpg,
+							./images\OctoGames\maiami-2.jpg,
+							./images\OctoGames\maiami-3.gif"></span>
+					</li>
+					<li>Step-Sister's Pussy - polishing previous features.
+						<span data-imgages="
+							./images\OctoGames\sister-1.jpg,
+							./images\OctoGames\sister-2.jpg"></span>
+					</li>
+					<li>Orgasm Academy - integrate new global feature "Phone" and reputation system.
+						<span data-imgages="
+							./images\OctoGames\academy-1.jpg,
+							./images\OctoGames\academy-2.jpg,
+							./images\OctoGames\academy-3.jpg"></span>
+					</li>
+					<li>Sex Detective - integrate detective minigame like a Alan Wake.
+						<span data-imgages="
+							./images\OctoGames\detective-1.jpg,
+							./images\OctoGames\detective-2.jpg,
+							./images\OctoGames\detective-3.jpg,
+							./images\OctoGames\detective-4.jpg"></span>
+					</li>
+					<li>SEX Massage - default visual novel.
+						<span data-imgages="
+							./images\OctoGames\massage-1.jpg,
+							./images\OctoGames\massage-2.jpg,
+							./images\OctoGames\massage-3.jpg"></span>
+					</li>
+				</ul>
 			</div>
-			<div class="deathScreen">Death</div>
+
+			<div class="card">
+				<h2>Unity Developer, LongRiver Team.</h2>
+				<div class="meta">March 2023 - April 2023</div>
+				<ul>
+					<p class="desc">
+						Participated in a Unity (C#) game jam: fully responsible for all mechanics implementation,
+						procedural level generation, FPS optimisation, and 2D physics.
+					</p>
+					<p class="desc">
+						Grow Down - hyptonic root simulator. 1st place in the ‘Best disclosure of the theme’.
+					</p>
+					<p class="stack">
+						Stack: Unity (C#), 2D Physics, ScriptableObjects, Object Pooling, Profiler.
+					</p>
+					<li>Procedural generation - tile-based level algorithm with difficulty control and balance.</li>
+					<li>Optimisation - pooled objects, Sprite Atlas, Unity Profiler, seamless transition between scenes.
+					</li>
+					<li>2D physics - Rigidbody2D, Colliders, collisions.</li>
+					<span data-imgages="
+						./images/LongRiverTeam/grow-down-1.png,
+						./images/LongRiverTeam/grow-down-2.png,
+						./images/LongRiverTeam/grow-down-3.png"></span>
+					<a href="https://babiosik.itch.io/grow-down" target="_blank">itch.io</a>
+				</ul>
+			</div>
+
+			<div class="card">
+				<h2>Unity Developer, Pixode</h2>
+				<div class="meta">September 2022 - March 2023</div>
+				<ul>
+					<p class="desc">
+						As part of a large product team (20+ people), I developed and maintained the client side of a
+						casual puzzle game on Unity (C#). I implemented online matches, in-app purchases, base building,
+						analytics, and fixed bugs and trained new players.
+					</p>
+					<p class="desc">
+						Soul Battles - puzzle game, Tetris-like.
+					</p>
+					<p class="stack">
+						Stack: Unity (C#), Firebase, Facebook Auth.
+					</p>
+					<li>PvP steal resources - opponent selection via REST API, game state synchronisation.</li>
+					<li>Player base - construction and upgrade system.</li>
+					<li>IAP & Analytics - Firebase and Facebook integration.</li>
+					<li>UI/UX flow - animated pop-ups, screens, rewards.</li>
+					<li>Bug fixes - crash and logic investigation, legacy code refactoring.</li>
+					<span data-imgages="
+						./images/Pixode/soul-battle-1.webp,
+						./images/Pixode/soul-battle-2.webp,
+						./images/Pixode/soul-battle-3.webp"></span>
+				</ul>
+			</div>
+
+			<div class="card">
+				<h2>Flutter Developer, WEZOM</h2>
+				<div class="meta">February 2021 - October 2022</div>
+				<ul>
+					<p class="desc">
+						Developed cross-platform client applications on Flutter (Android, iOS). Implemented complex
+						UI/UX, offline modes, caching, integration with REST/GraphQL, camera and GPS support.
+						Participated in internal B2B solution projects.
+					</p>
+					<p class="stack">
+						Stack: Flutter, BLoC, Dio, Hive, Firebase, camera, background, geolocation, push notifications.
+					</p>
+					<li>EasyLoad TMS - app for planning routes for long-distance drivers with changes in cargo
+						and tracking the condition of the vehicle and cargo. Route scheduling, cargo photo checklists
+						from the camera, data synchronisation when connection is restored.
+						<span data-imgages="
+							./images/WEZOM/easy-load-1.webp,
+							./images/WEZOM/easy-load-2.webp,
+							./images/WEZOM/easy-load-3.webp,
+							./images/WEZOM/easy-load-4.webp"></span>
+					</li>
+					<li>Tracker for agronomists - a series of applications for tracking the progress of farm fields and
+						the state of machinery. Offline mode, dynamic forms, data synchronisation, camera,
+						verifications.
+						<span data-imgages=""></span>
+					</li>
+					<li>MyService - app for recording car repair service. Dynamic forms, data synchronisation.
+						<span data-imgages="
+							./images/WEZOM/my-service-1.webp,
+							./images/WEZOM/my-service-2.webp,
+							./images/WEZOM/my-service-3.webp,
+							./images/WEZOM/my-service-4.webp"></span>
+
+					</li>
+					<li>Myastoria - catalogue for shopping and viewing recipes. Catalogue screens, shopping carts,
+						payments, recipes, map of nearby stores.
+						<span data-imgages="
+							./images/WEZOM/myastoria-1.webp,
+							./images/WEZOM/myastoria-2.webp,
+							./images/WEZOM/myastoria-3.webp,
+							./images/WEZOM/myastoria-4.webp,
+							./images/WEZOM/myastoria-5.webp"></span>
+					</li>
+					<li>Delivery Groups - app for creating and managing parcels. Data synchronisation, offline mode, map
+						rendering, GPS.
+						<span data-imgages="
+							./images\WEZOM\delivery-group-1.webp,
+							./images\WEZOM\delivery-group-2.webp,
+							./images\WEZOM\delivery-group-3.webp,
+							./images\WEZOM\delivery-group-4.webp"></span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="card">
+				<h2>Mobile Developer, Sandwich Inc.</h2>
+				<div class="meta">August 2018 - August 2021</div>
+				<ul>
+					<p class="desc">
+						At a start-up, I developed casual and hyper-casual games using Unity (C#). Later, I switched to
+						Flutter and brushed up on NodeJS.
+					</p>
+					<li>Magic 8-ball - Funny game with random answers after shake phone. Unity/C#. Animations, physics,
+						haptic feedback, AdMob.
+						<span data-imgages="
+							./images/SandwichInc/magic-8-ball-1.webp,
+							./images/SandwichInc/magic-8-ball-2.webp"></span>
+					</li>
+					<li>Coin Flip - Funny coin flipping game. Unity/C#: 3D coin physics, haptic feedback, AdMob.
+						<span data-imgages=""></span>
+					</li>
+					<li>Bip WatchFace - catalogue of visual firmware. Flutter (REST, Hive): smooth image loading,
+						offline gallery of favourites, collection of like statistics.
+						<span data-imgages="
+							./images/SandwichInc/bip-watch-face.webp"></span>
+					</li>
+					<li>
+						Card Bin Checker - QoL app. Flutter (Dio, REST): integration with third-party services via REST
+						API.
+						<span data-imgages="
+							./images/SandwichInc/bin-card-checker-1.webp,
+							./images/SandwichInc/bin-card-checker-2.webp"></span>
+					</li>
+					<li>Telegram RPG - text-based RPG in a bot. NodeJS (Telegraf, PostgreSQL): story branches, progress
+						saving.
+						<span data-imgages=""></span>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<script src="main.js"></script>
-	</body>
+	</div>
+
+	<footer> Babiosik 2025 • Unity & Flutter developer</footer>
+
+	<div id="lightbox" class="lightbox">
+		<span class="close">&times;</span>
+		<img src="" alt="enlarged">
+	</div>
+
+	<script>
+		document.querySelectorAll('.card').forEach(card => {
+			/* wrap content */
+			const header = document.createElement('div');
+			header.className = 'card-header';
+			const body = document.createElement('div');
+			body.className = 'card-body';
+			Array.from(card.children).forEach(child => body.appendChild(child));
+
+			const h2 = body.querySelector('h2');
+			const meta = body.querySelector('.meta');
+			header.appendChild(h2);
+			if (meta) header.appendChild(meta);
+			meta.innerHTML += '<div class="chevron"></div>';
+
+			card.appendChild(header);
+			card.appendChild(body);
+
+			/* accordion toggle */
+			header.addEventListener('click', () => card.classList.toggle('active'));
+
+			/* -------- decorate <span data-img=""> -------- */
+			document.querySelectorAll('span[data-imgages]').forEach(span => {
+				const urlList = span.dataset.imgages.trim();
+				if (!urlList) {
+					span.classList.add('no-images');
+					span.innerHTML = 'No images';
+					return;
+				}
+
+				span.classList.add('has-thumb');
+
+				const urls = urlList.split(',').map(u => u.trim());
+
+				span.innerHTML = '';
+				urls.forEach(url => {
+					span.innerHTML += `<img class="span-thumb" src="${url}" alt="thumb">`;
+				});
+			});
+
+			/* -------- light-box logic -------- */
+			const box = document.getElementById('lightbox');
+			const boxImg = box.querySelector('img');
+			const close = box.querySelector('.close');
+
+			document.addEventListener('click', e => {
+				if (e.target.classList.contains('span-thumb')) {
+					boxImg.src = e.target.src;
+					box.classList.add('active');
+				}
+			});
+			close.onclick = () => box.classList.remove('active');
+			box.onclick = e => { if (e.target === box) close.onclick(); };
+		});
+
+
+	</script>
+</body>
+
+<style>
+	:root {
+		--bg: #111;
+		--card: #1a1a1a;
+		--accent: #00e5ff;
+		--text: #e0e0e0;
+		--sub: #888;
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	}
+
+	body {
+		background: var(--bg);
+		color: var(--text);
+		line-height: 1.6;
+	}
+
+	header {
+		text-align: center;
+		padding: 3rem 1rem 2rem;
+	}
+
+	header h1 {
+		font-size: 2.5rem;
+		letter-spacing: 1px;
+		margin-bottom: .5rem;
+	}
+
+	header p {
+		color: var(--sub);
+	}
+
+	.tabs {
+		display: flex;
+		justify-content: center;
+		gap: .5rem;
+		padding: 0 1rem;
+	}
+
+	.tab {
+		padding: .75rem 2rem;
+		cursor: pointer;
+		border: 2px solid transparent;
+		background: var(--card);
+		color: var(--sub);
+		font-weight: 600;
+		border-radius: 30px;
+		transition: all .3s ease;
+	}
+
+	.tab.active {
+		color: var(--accent);
+		border-color: var(--accent);
+	}
+
+	.content {
+		max-width: 1000px;
+		margin: 2rem auto;
+		padding: 0 1rem;
+	}
+
+	.pane {
+		display: none;
+		animation: fade .6s ease;
+	}
+
+	.pane.active {
+		display: block;
+	}
+
+	@keyframes fade {
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.card {
+		background: var(--card);
+		border-radius: 12px;
+		margin-bottom: 1rem;
+		overflow: hidden;
+		border-left: 4px solid var(--accent);
+	}
+
+	.card-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.2rem 1.5rem;
+		cursor: pointer;
+		user-select: none;
+	}
+
+	.card-header:hover {
+		background: rgba(255, 255, 255, .03);
+	}
+
+	.card-header h2 {
+		color: var(--accent);
+		font-size: 1.25rem;
+	}
+
+	.card-header .meta {
+		color: var(--sub);
+		font-size: .85rem;
+		text-align: right;
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+	}
+
+	.card-header .chevron {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 6px 6px 0 6px;
+		border-color: var(--accent) transparent transparent transparent;
+		transition: transform .3s ease;
+	}
+
+	.card.active .chevron {
+		transform: rotate(180deg);
+	}
+
+	.card-body {
+		max-height: 0;
+		padding: 0 1.5rem;
+		overflow: hidden;
+		transition: max-height .4s ease, padding .4s ease;
+	}
+
+	.card.active .card-body {
+		max-height: max-content;
+		/* enough for long content */
+		padding-bottom: 1.5rem;
+	}
+
+	.card-body ul {
+		margin-left: 1.2rem;
+		padding-top: 1rem;
+		color: var(--text);
+	}
+
+	.card-body ul p {
+		margin-bottom: .5rem;
+		padding-bottom: .5rem;
+	}
+
+	.card-body ul p.desc {
+		color: var(--text);
+		border-bottom: 1px solid var(--accent);
+	}
+
+	.card-body ul p.stack {
+		font-size: .85rem;
+		color: var(--sub);
+	}
+
+	.card-body ul li::marker {
+		color: var(--accent);
+	}
+
+	span.no-images {
+		display: block;
+		color: var(--sub);
+		font-size: .9rem;
+		margin-bottom: .5rem;
+	}
+
+	footer {
+		text-align: center;
+		padding: 3rem 1rem 2rem;
+		font-size: .85rem;
+		color: var(--sub);
+	}
+
+	/* ---- span with image ---- */
+
+	.has-thumb {
+		list-style: none;
+		/* remove native bullet */
+		padding-left: 0;
+		margin: .8rem 0;
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+
+	.has-thumb .span-text {
+		flex: 0 0 70%;
+	}
+
+	.has-thumb .span-thumb {
+		flex: 0 0 80px;
+		height: 80px;
+		border-radius: 8px;
+		object-fit: cover;
+		border: 2px solid var(--accent);
+		cursor: zoom-in;
+		transition: transform .25s;
+	}
+
+	.has-thumb .span-thumb:hover {
+		transform: scale(1.08);
+	}
+
+	/* ---- light-box (re-used for every picture) ---- */
+	.lightbox {
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, .85);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity .3s;
+		z-index: 999;
+	}
+
+	.lightbox.active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.lightbox img {
+		max-width: 90vw;
+		max-height: 90vh;
+		border-radius: 8px;
+	}
+
+	.lightbox .close {
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		font-size: 2.5rem;
+		color: #fff;
+		cursor: pointer;
+		line-height: 1;
+	}
+</style>
+
 </html>
