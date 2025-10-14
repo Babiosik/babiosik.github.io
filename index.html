@@ -315,17 +315,19 @@
 		});
 
 		/* chaotic background */
-		let count = randomInt(12, 18);
+		let count = randomInt(32, 48);
 		for (let i = 0; i < count; i++) {
 			let size = randomInt(6, 14);
 			const span = document.createElement('span');
-			span.style.left = randomInt(20, 80) + '%';
-			span.style.top = randomInt(20, 80) + '%';
+			span.style.left = randomInt(0, 100) + '%';
+			span.style.top = randomInt(0, 100) + '%';
 			span.style.width = size + 'px';
 			span.style.height = size + 'px';
-			span.style.animationDuration = randomInt(20, 40) + 's';
+			span.style.animationDuration = randomInt(40, 60) + 's';
 			span.style.animationDelay = -randomInt(0, 50) + 's';
-			span.style.opacity = randomInt(30, 90) / 100;
+			span.style.opacity = randomInt(60, 100) / 100;
+			span.style.borderRadius = randomInt(0, 30) + '%';
+			span.style.filter = `blur(${randomInt(0, 15) / 10}px)`;
 			document.querySelector('#chaotic-background').appendChild(span);
 		}
 
@@ -605,9 +607,8 @@
 		width: 100%;
 		height: 100%;
 		z-index: -1;
-		filter: blur(1px);
+		/* filter: blur(1px); */
 		overflow: hidden;
-		opacity: .9;
 	}
 
 	/* Individual particle/static elements */
@@ -615,7 +616,6 @@
 		position: fixed;
 		display: block;
 		background: var(--accent);
-		border-radius: 20%;
 
 		/* Animation base */
 		animation: chaotic-move 10s ease-in-out infinite alternate;
