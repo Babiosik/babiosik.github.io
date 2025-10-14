@@ -20,9 +20,7 @@
 		<div class="tab" onclick="switchTab(event, 'flutter')">Flutter Projects</div>
 	</div>
 	-->
-
 	<div class="content">
-		<!--  Unity  -->
 		<div id="unity" class="pane active">
 
 			<div class="card">
@@ -238,7 +236,22 @@
 		</div>
 	</div>
 
-	<footer> Babiosik 2025 • Unity & Flutter developer</footer>
+	<footer>
+		<div>
+			Mykola Andrieiev 2025 • Unity & Flutter developer
+		</div>
+		<div style="display:inline-flex; gap:20px; align-items:center;">
+			<a href="https://www.linkedin.com/in/babiosik" target="_blank" aria-label="LinkedIn">
+				<img src="./images/linkedin.png" alt="LinkedIn" width="32" height="32">
+			</a>
+			<a href="https://github.com/Babiosik" target="_blank" aria-label="GitHub">
+				<img src="./images/github.png" alt="GitHub" width="32" height="32">
+			</a>
+			<a href="https://t.me/BabiosikWork" target="_blank" aria-label="Telegram">
+				<img src="./images/telegram.png" alt="Telegram" width="32" height="32">
+			</a>
+		</div>
+	</footer>
 
 	<div id="lightbox" class="lightbox">
 		<span class="close">&times;</span>
@@ -299,8 +312,6 @@
 			close.onclick = () => box.classList.remove('active');
 			box.onclick = e => { if (e.target === box) close.onclick(); };
 		});
-
-
 	</script>
 </body>
 
@@ -489,6 +500,16 @@
 		padding: 3rem 1rem 2rem;
 		font-size: .85rem;
 		color: var(--sub);
+	}
+
+	footer > div {
+		margin-bottom: 1rem;
+	}
+
+	a > img:hover {
+		opacity: .75;
+		transform: scale(1.05);
+		transition: opacity .25s ease, transform .25s ease;
 	}
 
 	/* ---- span with image ---- */
