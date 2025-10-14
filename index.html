@@ -9,9 +9,10 @@
 </head>
 
 <body>
+	<div id="chaotic-background"></div>
 	<header>
-		<h1>Mykola</h1>
-		<p>Unity & Production-grade Flutter apps</p>
+		<h1>Mykola Andrieiev</h1>
+		<p>Unity & Flutter developer</p>
 	</header>
 
 	<!--
@@ -312,6 +313,25 @@
 			close.onclick = () => box.classList.remove('active');
 			box.onclick = e => { if (e.target === box) close.onclick(); };
 		});
+
+		/* chaotic background */
+		let count = randomInt(12, 18);
+		for (let i = 0; i < count; i++) {
+			let size = randomInt(6, 14);
+			const span = document.createElement('span');
+			span.style.left = randomInt(20, 80) + '%';
+			span.style.top = randomInt(20, 80) + '%';
+			span.style.width = size + 'px';
+			span.style.height = size + 'px';
+			span.style.animationDuration = randomInt(20, 40) + 's';
+			span.style.animationDelay = -randomInt(0, 50) + 's';
+			span.style.opacity = randomInt(30, 90) / 100;
+			document.querySelector('#chaotic-background').appendChild(span);
+		}
+
+		function randomInt(min, max) {
+			return Math.floor(Math.random() * (max - min)) + min;
+		}
 	</script>
 </body>
 
@@ -502,11 +522,11 @@
 		color: var(--sub);
 	}
 
-	footer > div {
+	footer>div {
 		margin-bottom: 1rem;
 	}
 
-	a > img:hover {
+	a>img:hover {
 		opacity: .75;
 		transform: scale(1.05);
 		transition: opacity .25s ease, transform .25s ease;
@@ -575,6 +595,58 @@
 		color: #fff;
 		cursor: pointer;
 		line-height: 1;
+	}
+
+	/* Background container */
+	#chaotic-background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(1px);
+		overflow: hidden;
+		opacity: .9;
+	}
+
+	/* Individual particle/static elements */
+	#chaotic-background > span {
+		position: fixed;
+		display: block;
+		background: var(--accent);
+		border-radius: 20%;
+
+		/* Animation base */
+		animation: chaotic-move 10s ease-in-out infinite alternate;
+	}
+
+	/* Keyframes for the chaotic movement */
+	@keyframes chaotic-move {
+		0% {
+			transform: translate(0, 0) scale(1) rotate(0deg);
+			opacity: 0.5;
+		}
+
+		25% {
+			transform: translate(15vw, 15vh) scale(1.2) rotate(45deg);
+			opacity: 0.8;
+		}
+
+		50% {
+			transform: translate(-10vw, 20vh) scale(0.9) rotate(-90deg);
+			opacity: 0.4;
+		}
+
+		75% {
+			transform: translate(25vw, -10vh) scale(1.1) rotate(135deg);
+			opacity: 0.7;
+		}
+
+		100% {
+			transform: translate(0, 0) scale(1) rotate(0deg);
+			opacity: 0.5;
+		}
 	}
 </style>
 
