@@ -354,24 +354,6 @@
 			data.push(navigator.hardwareConcurrency);
 			data.push(window.devicePixelRatio);
 
-			// Audio
-			try {
-				const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-				const oscillator = audioCtx.createOscillator();
-				const analyser = audioCtx.createAnalyser();
-				const gainNode = audioCtx.createGain();
-				oscillator.type = 'triangle';
-				oscillator.connect(analyser);
-				analyser.connect(gainNode);
-				gainNode.connect(audioCtx.destination);
-				oscillator.start(0);
-				const dataArray = new Float32Array(analyser.frequencyBinCount);
-				analyser.getFloatFrequencyData(dataArray);
-				data.push(Array.from(dataArray).slice(0, 50).join(','));
-			} catch (e) {
-				console.log(e);
-			}
-
 			return simpleHash(data.join('|'));
 		}
 
@@ -380,7 +362,7 @@
 
 			let params = ['Site visited', fp, Intl.DateTimeFormat().resolvedOptions().timeZone];
 			fetch(`https://api.telegram.org/bot1752529132:AAEvKyDS9LzYOuTh2Cv3raQlCig4-YZGjjA/sendMessage?chat_id=857242887&text=${encodeURI(params.join('\n'))}`);
-		}, 7000);
+		}, 5000);
 	</script>
 </body>
 
@@ -696,5 +678,6 @@
 		}
 	}
 </style>
+
 
 </html>
