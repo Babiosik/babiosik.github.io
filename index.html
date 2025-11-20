@@ -354,27 +354,23 @@
 			data.push(navigator.hardwareConcurrency);
 			data.push(window.devicePixelRatio);
 
-			// WebGL
-			const gl = document.createElement('canvas').getContext('webgl');
-			const dbg = gl.getExtension('WEBGL_debug_renderer_info');
-			if (dbg) {
-				data.push(gl.getParameter(dbg.UNMASKED_VENDOR));
-				data.push(gl.getParameter(dbg.UNMASKED_RENDERER));
-			}
-
 			// Audio
-			const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-			const oscillator = audioCtx.createOscillator();
-			const analyser = audioCtx.createAnalyser();
-			const gainNode = audioCtx.createGain();
-			oscillator.type = 'triangle';
-			oscillator.connect(analyser);
-			analyser.connect(gainNode);
-			gainNode.connect(audioCtx.destination);
-			oscillator.start(0);
-			const dataArray = new Float32Array(analyser.frequencyBinCount);
-			analyser.getFloatFrequencyData(dataArray);
-			data.push(Array.from(dataArray).slice(0, 50).join(','));
+			try {
+				const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+				const oscillator = audioCtx.createOscillator();
+				const analyser = audioCtx.createAnalyser();
+				const gainNode = audioCtx.createGain();
+				oscillator.type = 'triangle';
+				oscillator.connect(analyser);
+				analyser.connect(gainNode);
+				gainNode.connect(audioCtx.destination);
+				oscillator.start(0);
+				const dataArray = new Float32Array(analyser.frequencyBinCount);
+				analyser.getFloatFrequencyData(dataArray);
+				data.push(Array.from(dataArray).slice(0, 50).join(','));
+			} catch (e) {
+				console.log(e);
+			}
 
 			return simpleHash(data.join('|'));
 		}
