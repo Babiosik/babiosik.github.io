@@ -43,7 +43,7 @@
 						<span data-imgages=""></span>
 					</li>
 					<li>SEX Route 69 - significant improvement in mini-games with races.
-						<span data-imgages="./images\OctoGames\route-1.gif"></span>
+						<span data-imgages="./images\OctoGames\route-1.mp4"></span>
 					</li>
 					<li>SEX Sport College - polishing previous features.
 						<span data-imgages="
@@ -54,14 +54,14 @@
 					<li>Sex, Camera, Action! - integrate simple cooking minigame.
 						<span data-imgages="
 						./images\OctoGames\camera-action-1.jpg,
-						./images\OctoGames\camera-action-2.gif,
-						./images\OctoGames\camera-action-3.gif"></span>
+						./images\OctoGames\camera-action-2.mp4,
+						./images\OctoGames\camera-action-3.mp4"></span>
 					</li>
 					<li>Hot & Lewd: Miami - integrate racing minigame like a Gran Turismo.
 						<span data-imgages="
 							./images\OctoGames\maiami-1.jpg,
 							./images\OctoGames\maiami-2.jpg,
-							./images\OctoGames\maiami-3.gif"></span>
+							./images\OctoGames\maiami-3.mp4"></span>
 					</li>
 					<li>Step-Sister's Pussy - polishing previous features.
 						<span data-imgages="
@@ -73,7 +73,7 @@
 							./images\OctoGames\academy-1.jpg,
 							./images\OctoGames\academy-2.jpg,
 							./images\OctoGames\academy-3.jpg,
-							./images\OctoGames\academy-4.gif"></span>
+							./images\OctoGames\academy-4.mp4"></span>
 					</li>
 					<li>Sex Detective - integrate detective minigame like a Alan Wake.
 						<span data-imgages="
@@ -81,7 +81,7 @@
 							./images\OctoGames\detective-2.jpg,
 							./images\OctoGames\detective-3.jpg,
 							./images\OctoGames\detective-4.jpg,
-							./images\OctoGames\detective-5.gif"></span>
+							./images\OctoGames\detective-5.mp4"></span>
 					</li>
 					<li>SEX Massage - default visual novel.
 						<span data-imgages="
@@ -139,9 +139,9 @@
 					<li>UI/UX flow - animated pop-ups, screens, rewards.</li>
 					<li>Bug fixes - crash and logic investigation, legacy code refactoring.</li>
 					<span data-imgages="
-						./images/Pixode/soul-battle-1.webp,
-						./images/Pixode/soul-battle-2.webp,
-						./images/Pixode/soul-battle-3.webp"></span>
+						./images/Pixode/soul-battle-1.jpg,
+						./images/Pixode/soul-battle-2.jpg,
+						./images/Pixode/soul-battle-3.jpg"></span>
 				</ul>
 			</div>
 
@@ -161,10 +161,10 @@
 						and tracking the condition of the vehicle and cargo. Route scheduling, cargo photo checklists
 						from the camera, data synchronisation when connection is restored.
 						<span data-imgages="
-							./images/WEZOM/easy-load-1.webp,
-							./images/WEZOM/easy-load-2.webp,
-							./images/WEZOM/easy-load-3.webp,
-							./images/WEZOM/easy-load-4.webp"></span>
+							./images/WEZOM/easy-load-1.jpg,
+							./images/WEZOM/easy-load-2.jpg,
+							./images/WEZOM/easy-load-3.jpg,
+							./images/WEZOM/easy-load-4.jpg"></span>
 					</li>
 					<li>Tracker for agronomists - a series of applications for tracking the progress of farm fields and
 						the state of machinery. Offline mode, dynamic forms, data synchronisation, camera,
@@ -173,28 +173,28 @@
 					</li>
 					<li>MyService - app for recording car repair service. Dynamic forms, data synchronisation.
 						<span data-imgages="
-							./images/WEZOM/my-service-1.webp,
-							./images/WEZOM/my-service-2.webp,
-							./images/WEZOM/my-service-3.webp,
-							./images/WEZOM/my-service-4.webp"></span>
+							./images/WEZOM/my-service-1.jpg,
+							./images/WEZOM/my-service-2.jpg,
+							./images/WEZOM/my-service-3.jpg,
+							./images/WEZOM/my-service-4.jpg"></span>
 
 					</li>
 					<li>Myastoria - catalogue for shopping and viewing recipes. Catalogue screens, shopping carts,
 						payments, recipes, map of nearby stores.
 						<span data-imgages="
-							./images/WEZOM/myastoria-1.webp,
-							./images/WEZOM/myastoria-2.webp,
-							./images/WEZOM/myastoria-3.webp,
-							./images/WEZOM/myastoria-4.webp,
-							./images/WEZOM/myastoria-5.webp"></span>
+							./images/WEZOM/myastoria-1.jpg,
+							./images/WEZOM/myastoria-2.jpg,
+							./images/WEZOM/myastoria-3.jpg,
+							./images/WEZOM/myastoria-4.jpg,
+							./images/WEZOM/myastoria-5.jpg"></span>
 					</li>
 					<li>Delivery Groups - app for creating and managing parcels. Data synchronisation, offline mode, map
 						rendering, GPS.
 						<span data-imgages="
-							./images\WEZOM\delivery-group-1.webp,
-							./images\WEZOM\delivery-group-2.webp,
-							./images\WEZOM\delivery-group-3.webp,
-							./images\WEZOM\delivery-group-4.webp"></span>
+							./images\WEZOM\delivery-group-1.jpg,
+							./images\WEZOM\delivery-group-2.jpg,
+							./images\WEZOM\delivery-group-3.jpg,
+							./images\WEZOM\delivery-group-4.jpg"></span>
 					</li>
 				</ul>
 			</div>
@@ -256,7 +256,8 @@
 
 	<div id="lightbox" class="lightbox">
 		<span class="close">&times;</span>
-		<img src="" alt="enlarged">
+		<img class="dnone" src="" alt="enlarged">
+		<video class="dnone" src="" alt="enlarged">
 	</div>
 
 	<script>
@@ -295,23 +296,42 @@
 
 				span.innerHTML = '';
 				urls.forEach(url => {
-					span.innerHTML += `<img class="span-thumb" src="${url}" alt="thumb">`;
+					if (url.endsWith('.mp4')) {
+						span.innerHTML += `<video class="span-thumb" src="${url}" alt="thumb"></video>`;
+					} else {
+						span.innerHTML += `<img class="span-thumb" src="${url}" alt="thumb">`;
+					}
 				});
 			});
 
 			/* -------- light-box logic -------- */
 			const box = document.getElementById('lightbox');
 			const boxImg = box.querySelector('img');
+			const boxVideo = box.querySelector('video');
 			const close = box.querySelector('.close');
 
 			document.addEventListener('click', e => {
 				if (e.target.classList.contains('span-thumb')) {
-					boxImg.src = e.target.src;
+					if (e.target.src.endsWith('.mp4')) {
+						boxVideo.src = e.target.src;
+						boxVideo.load();
+						boxVideo.play();
+						boxVideo.classList.remove('dnone');
+					} else {
+						boxImg.src = e.target.src;
+						boxImg.classList.remove('dnone');
+					}
 					box.classList.add('active');
 				}
 			});
-			close.onclick = () => box.classList.remove('active');
-			box.onclick = e => { if (e.target === box) close.onclick(); };
+			close.onclick = () => {
+				box.classList.remove('active');
+				boxVideo.pause();
+				boxVideo.currentTime = 0;
+				boxImg.classList.add('dnone');
+				boxVideo.classList.add('dnone');
+			};
+			box.onclick = e => close.onclick();
 		});
 
 		/* chaotic background */
@@ -612,7 +632,8 @@
 		pointer-events: auto;
 	}
 
-	.lightbox img {
+	.lightbox img,
+	.lightbox video {
 		max-width: 90vw;
 		max-height: 90vh;
 		border-radius: 8px;
@@ -626,6 +647,10 @@
 		color: #fff;
 		cursor: pointer;
 		line-height: 1;
+	}
+
+	.lightbox .dnone {
+		display: none;
 	}
 
 	/* Background container */
