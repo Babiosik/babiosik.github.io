@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Політика конфіденційності / Privacy Policy — The First Barber</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.2rem; margin-top: 2rem; }
+  .meta { opacity: .7; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #8884; padding: 8px 10px; text-align: left; vertical-align: top; font-size: .95rem; }
+  th { background: #8881; }
+  .todo { background: #ffec9966; padding: 0 4px; border-radius: 3px; }
+  .lang { display: flex; gap: 8px; justify-content: flex-end; margin-bottom: 8px; }
+  .lang a { padding: 4px 12px; border: 1px solid #8886; border-radius: 6px; text-decoration: none; color: inherit; font-size: .9rem; }
+  .lang a[aria-current="true"] { background: #8882; font-weight: 600; }
+  /* Без JavaScript показуємо обидві мови одна за одною */
+  html.js [lang="en"] { display: none; }
+  html.js[data-lang="en"] [lang="uk"] { display: none; }
+  html.js[data-lang="en"] [lang="en"] { display: block; }
+</style>
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add('js');
+    function pick() {
+      var q = /[?&]lang=(uk|en)/.exec(location.search);
+      if (q) return q[1];
+      try { var s = localStorage.getItem('lang'); if (s === 'uk' || s === 'en') return s; } catch (e) {}
+      return /^uk/i.test(navigator.language || '') ? 'uk' : 'en';
+    }
+    function set(l, save) {
+      root.setAttribute('data-lang', l);
+      root.lang = l;
+      document.title = l === 'uk' ? 'Політика конфіденційності — The First Barber' : 'Privacy Policy — The First Barber';
+      var links = document.querySelectorAll('.lang a');
+      for (var i = 0; i < links.length; i++) {
+        links[i].setAttribute('aria-current', links[i].getAttribute('data-l') === l ? 'true' : 'false');
+      }
+      if (save) { try { localStorage.setItem('lang', l); } catch (e) {} }
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      var links = document.querySelectorAll('.lang a');
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function (e) {
+          e.preventDefault();
+          set(this.getAttribute('data-l'), true);
+        });
+      }
+      set(pick(), false);
+    });
+  })();
+</script>
+</head>
+<body>
+
+<nav class="lang" aria-label="Language">
+  <a href="?lang=uk" data-l="uk">Українська</a>
+  <a href="?lang=en" data-l="en">English</a>
+</nav>
+
+<!-- ===================== УКРАЇНСЬКА ===================== -->
+<div lang="uk">
+
+<h1>Політика конфіденційності</h1>
+<p class="meta">Застосунок «The First Barber» · Остання редакція: 18 листопада 2026 р.</p>
+
+<p>Ця політика пояснює, які дані збирає мобільний застосунок «The First Barber» (далі — «Застосунок»), навіщо вони потрібні, кому передаються і як ви можете ними керувати. Застосунок призначений для онлайн-запису до барбершопу «Перший Барбер».</p>
+
+<h2>1. Хто відповідає за дані</h2>
+<p>Володілець даних: ТОВ «АЙТІ КОД ІНДАСТРІ».<br>
+Контакт для запитів щодо даних: <a href="mailto:andrieiev.mykola.199@gmail.com">andrieiev.mykola.199@gmail.com</a>.</p>
+
+<h2>2. Які дані ми обробляємо</h2>
+<table>
+  <tr><th>Дані</th><th>Навіщо</th><th>Де зберігаються</th></tr>
+  <tr>
+    <td>Ім'я та прізвище, номер телефону</td>
+    <td>Створення запису до барбершопу, щоб майстер міг вас ідентифікувати й зв'язатися з вами.</td>
+    <td>Передаються на наш сервер і далі в систему запису Altegio, де створюється запис. Також зберігаються лише на вашому телефоні, якщо ви заповнили профіль.</td>
+  </tr>
+  <tr>
+    <td>E-mail (необов'язково)</td>
+    <td>Щоб барбершоп міг надіслати підтвердження чи зв'язатися з вами.</td>
+    <td>Так само, як вище.</td>
+  </tr>
+  <tr>
+    <td>Коментар до запису (необов'язково)</td>
+    <td>Передається барбершопу разом із записом.</td>
+    <td>Передається в Altegio. На сервері не зберігається.</td>
+  </tr>
+  <tr>
+    <td>Деталі запису: філіал, майстер, послуга, дата й час</td>
+    <td>Створення запису та показ історії записів у вашому профілі.</td>
+    <td>Altegio та ваш телефон (історія записів).</td>
+  </tr>
+  <tr>
+    <td>Технічні дані запитів до сервера: час, адреса запиту, код відповіді</td>
+    <td>Робота й безпека сервісу, пошук і виправлення збоїв.</td>
+    <td>Журнали (логи) сервера, див. розділ 5.</td>
+  </tr>
+</table>
+<p><strong>Ми не збираємо:</strong> геолокацію, контакти, фото, мікрофон, камеру, рекламний ідентифікатор. У Застосунку немає реклами та аналітичних чи рекламних сервісів сторонніх компаній. Застосунок використовує лише дозвіл на доступ до інтернету.</p>
+
+<h2>3. Що зберігається на вашому телефоні</h2>
+<ul>
+  <li><strong>Профіль</strong> (ім'я, телефон, e-mail) зберігається в зашифрованому сховищі застосунку й використовується лише для автозаповнення форми запису.</li>
+  <li><strong>Історія записів</strong> (до 100 останніх) зберігається локально й показується на сторінці профілю.</li>
+</ul>
+<p>Ці дані не передаються нам автоматично. Ви можете видалити їх у будь-який момент: кнопка «Видалити всі мої дані» на сторінці профілю, видалення окремих записів з історії, очищення даних застосунку в налаштуваннях телефона або видалення застосунку.</p>
+
+<h2>4. Кому передаються дані</h2>
+<ul>
+  <li><strong>Altegio (alteg.io)</strong> — сервіс онлайн-запису, який використовує барбершоп. Дані запису (ім'я, телефон, e-mail, коментар, послуга, майстер, час) передаються туди для створення запису. Altegio та барбершоп обробляють їх за власними політиками конфіденційності.</li>
+  <li><strong>Хостинг сервера</strong> — наш сервер розміщений у хмарній інфраструктурі Amazon Web Services (AWS). Провайдер може обробляти технічні дані мережевих з'єднань.</li>
+</ul>
+<p>Ми не продаємо ваші дані й не передаємо їх рекламним мережам.</p>
+
+<h2>5. Журнали сервера та терміни зберігання</h2>
+<ul>
+  <li>Ім'я, телефон і e-mail у журналах записуються лише в замаскованому вигляді: ініціали замість імені, лише останні 4 цифри телефона, перша літера e-mail. Текст коментаря в журнали не потрапляє.</li>
+  <li>Звичайні журнали зберігаються до <strong>14 днів</strong>, журнали помилок — до <strong>30 днів</strong>, після чого автоматично видаляються.</li>
+  <li>IP-адреса використовується для обмеження частоти запитів (захист від зловживань) лише в оперативній пам'яті сервера й не записується в журнали застосунку.</li>
+</ul>
+<p>Дані записів у самому Altegio зберігаються за правилами Altegio та барбершопу. Щоб видалити або змінити запис чи свої дані там, звертайтеся до барбершопу або до нас за контактом вище.</p>
+
+<h2>6. Безпека</h2>
+<p>Зв'язок між Застосунком і сервером шифрується (HTTPS), а Застосунок приймає лише сертифікат нашого сервера (certificate pinning). Профіль на телефоні зберігається в зашифрованому вигляді. Жодна система не може гарантувати абсолютну безпеку, але ми обмежуємо обсяг даних і строки їх зберігання.</p>
+
+<h2>7. Ваші права</h2>
+<p>Ви маєте право отримати інформацію про свої дані, виправити їх, вимагати видалення та обмеження обробки, відкликати згоду. Надішліть запит на адресу з розділу 1, вказавши ім'я та телефон, які ви використовували для запису. Ми відповімо протягом 30 днів. Також ви маєте право звернутися зі скаргою до Уповноваженого Верховної Ради України з прав людини або до наглядового органу у вашій країні.</p>
+<p>Подання даних для запису є добровільним, але без імені та телефону створити запис неможливо.</p>
+
+<h2>8. Діти</h2>
+<p>Застосунок не призначений для дітей до 16 років, і ми свідомо не збираємо їхні дані. Якщо вам відомо про такий випадок, напишіть нам, і ми видалимо дані.</p>
+
+<h2>9. Зміни політики</h2>
+<p>Ми можемо оновлювати цю політику. Актуальна редакція завжди доступна за цією адресою, а дата останнього оновлення вказана вгорі сторінки.</p>
+
+</div>
+
+<!-- ===================== ENGLISH ===================== -->
+<div lang="en">
+
+<h1>Privacy Policy</h1>
+<p class="meta">“The First Barber” app · Last updated: 18 November 2026</p>
+
+<p>This policy explains what data the “The First Barber” mobile app (the “App”) collects, why it is needed, who receives it, and how you can control it. The App is used to book appointments online at the “First Barber” barbershop.</p>
+
+<h2>1. Who is responsible for the data</h2>
+<p>Data controller: LLC “IT CODE INDUSTRY” (ТОВ «АЙТІ КОД ІНДАСТРІ»).<br>
+Contact for data requests: <a href="mailto:andrieiev.mykola.199@gmail.com">andrieiev.mykola.199@gmail.com</a>.</p>
+
+<h2>2. What data we process</h2>
+<table>
+  <tr><th>Data</th><th>Purpose</th><th>Where it is stored</th></tr>
+  <tr>
+    <td>First and last name, phone number</td>
+    <td>Creating a barbershop appointment so the barber can identify and contact you.</td>
+    <td>Sent to our server and then to the Altegio booking system, where the appointment is created. Also stored only on your phone if you fill in your profile.</td>
+  </tr>
+  <tr>
+    <td>E-mail (optional)</td>
+    <td>So the barbershop can send a confirmation or contact you.</td>
+    <td>Same as above.</td>
+  </tr>
+  <tr>
+    <td>Appointment comment (optional)</td>
+    <td>Passed to the barbershop together with the appointment.</td>
+    <td>Sent to Altegio. Not stored on our server.</td>
+  </tr>
+  <tr>
+    <td>Appointment details: branch, barber, service, date and time</td>
+    <td>Creating the appointment and showing your booking history in your profile.</td>
+    <td>Altegio and your phone (booking history).</td>
+  </tr>
+  <tr>
+    <td>Technical data of server requests: time, request address, response code</td>
+    <td>Operation and security of the service, finding and fixing failures.</td>
+    <td>Server logs, see section 5.</td>
+  </tr>
+</table>
+<p><strong>We do not collect:</strong> location, contacts, photos, microphone, camera, or advertising ID. The App contains no ads and no third-party analytics or advertising services. The App uses only the internet access permission.</p>
+
+<h2>3. What is stored on your phone</h2>
+<ul>
+  <li><strong>Profile</strong> (name, phone, e-mail) is kept in the app's encrypted storage and is used only to pre-fill the booking form.</li>
+  <li><strong>Booking history</strong> (up to the last 100 entries) is stored locally and shown on the profile page.</li>
+</ul>
+<p>This data is not sent to us automatically. You can delete it at any time: the “Delete all my data” button on the profile page, deleting individual entries from the history, clearing the app's data in your phone settings, or uninstalling the App.</p>
+
+<h2>4. Who receives the data</h2>
+<ul>
+  <li><strong>Altegio (alteg.io)</strong> — the online booking service used by the barbershop. Appointment data (name, phone, e-mail, comment, service, barber, time) is sent there to create the appointment. Altegio and the barbershop process it under their own privacy policies.</li>
+  <li><strong>Server hosting</strong> — our server runs on Amazon Web Services (AWS) cloud infrastructure. The provider may process technical network connection data.</li>
+</ul>
+<p>We do not sell your data and do not share it with advertising networks.</p>
+
+<h2>5. Server logs and retention</h2>
+<ul>
+  <li>Name, phone and e-mail are written to logs only in masked form: initials instead of the name, only the last 4 digits of the phone, the first letter of the e-mail. The comment text is never written to logs.</li>
+  <li>Regular logs are kept for up to <strong>14 days</strong>, error logs for up to <strong>30 days</strong>, and are then deleted automatically.</li>
+  <li>The IP address is used for rate limiting (abuse protection) only in the server's memory and is not written to the application logs.</li>
+</ul>
+<p>Appointment data inside Altegio itself is kept under the rules of Altegio and the barbershop. To delete or change an appointment or your data there, contact the barbershop or us using the contact above.</p>
+
+<h2>6. Security</h2>
+<p>Communication between the App and the server is encrypted (HTTPS), and the App accepts only our server's certificate (certificate pinning). The profile on your phone is stored encrypted. No system can guarantee absolute security, but we limit the amount of data and its retention period.</p>
+
+<h2>7. Your rights</h2>
+<p>You have the right to access your data, correct it, request deletion or restriction of processing, and withdraw consent. Send a request to the address in section 1, stating the name and phone number you used for booking. We will respond within 30 days. You also have the right to lodge a complaint with the Ukrainian Parliament Commissioner for Human Rights or with the supervisory authority in your country.</p>
+<p>Providing data for a booking is voluntary, but an appointment cannot be created without a name and phone number.</p>
+
+<h2>8. Children</h2>
+<p>The App is not intended for children under 16, and we do not knowingly collect their data. If you know of such a case, write to us and we will delete the data.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>We may update this policy. The current version is always available at this address, and the date of the last update is shown at the top of the page.</p>
+
+</div>
+
+</body>
+</html>
