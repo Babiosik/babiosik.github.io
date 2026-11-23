@@ -3,339 +3,946 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Portfolio – Games & Flutter</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style src="index.css"></style>
+	<title>Mykola Andrieiev – Unity & Flutter Developer</title>
+	<meta name="description"
+		content="Mykola Andrieiev – Unity (C#) and Flutter developer with ~7 years of experience: games shipped on Steam, mobile games and cross-platform B2B apps.">
+	<link rel="canonical" href="https://babiosik.github.io/">
+
+	<meta property="og:type" content="profile">
+	<meta property="og:title" content="Mykola Andrieiev – Unity & Flutter Developer">
+	<meta property="og:description"
+		content="~7 years of experience: games shipped on Steam, mobile games and cross-platform Flutter apps.">
+	<meta property="og:url" content="https://babiosik.github.io/">
+	<meta property="og:image" content="https://babiosik.github.io/images/LongRiverTeam/grow-down-1.png">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<style>
+		:root {
+			--bg: #111;
+			--card: #1a1a1a;
+			--accent: #00e5ff;
+			--text: #e0e0e0;
+			--sub: #9a9a9a;
+		}
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: var(--bg);
+			color: var(--text);
+			line-height: 1.6;
+			font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+		}
+
+		a {
+			color: var(--accent);
+		}
+
+		/* ---------- header ---------- */
+		header {
+			text-align: center;
+			padding: 3rem 1rem 1rem;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		header h1 {
+			font-size: 2.5rem;
+			letter-spacing: 1px;
+			line-height: 1.2;
+			margin-bottom: .4rem;
+		}
+
+		header .role {
+			color: var(--accent);
+			font-size: 1.15rem;
+			font-weight: 600;
+		}
+
+		header .summary {
+			max-width: 720px;
+			margin: 1.2rem auto 0;
+			color: var(--text);
+		}
+
+		.contacts {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: .6rem;
+			margin-top: 1.5rem;
+		}
+
+		.contacts a,
+		.contacts button {
+			display: inline-flex;
+			align-items: center;
+			gap: .5rem;
+			padding: .45rem 1rem;
+			border: 1px solid var(--accent);
+			border-radius: 30px;
+			background: transparent;
+			color: var(--text);
+			font: inherit;
+			font-size: .9rem;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background .25s, color .25s;
+		}
+
+		.contacts a:hover,
+		.contacts button:hover {
+			background: var(--accent);
+			color: #000;
+		}
+
+		.contacts img {
+			width: 18px;
+			height: 18px;
+		}
+
+		/* ---------- sections ---------- */
+		main {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 0 1rem;
+		}
+
+		section {
+			margin-top: 2.5rem;
+		}
+
+		section>h2 {
+			font-size: 1.1rem;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: var(--sub);
+			margin-bottom: 1rem;
+		}
+
+		/* highlights */
+		.highlights {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 1rem;
+		}
+
+		.highlight {
+			background: var(--card);
+			border-radius: 12px;
+			padding: 1rem 1.2rem;
+			border-top: 3px solid var(--accent);
+		}
+
+		.highlight strong {
+			display: block;
+			color: var(--accent);
+			font-size: 1.05rem;
+		}
+
+		.highlight span {
+			color: var(--sub);
+			font-size: .9rem;
+		}
+
+		/* skills */
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 1rem;
+		}
+
+		.skill-group {
+			background: var(--card);
+			border-radius: 12px;
+			padding: 1rem 1.2rem;
+		}
+
+		.skill-group h3 {
+			font-size: 1rem;
+			color: var(--accent);
+			margin-bottom: .6rem;
+		}
+
+		.tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: .4rem;
+			list-style: none;
+		}
+
+		.tags li {
+			font-size: .8rem;
+			padding: .15rem .6rem;
+			border-radius: 20px;
+			background: rgba(0, 229, 255, .08);
+			border: 1px solid rgba(0, 229, 255, .35);
+		}
+
+		/* ---------- cards (accordion) ---------- */
+		.card {
+			background: var(--card);
+			border-radius: 12px;
+			margin-bottom: 1rem;
+			overflow: hidden;
+			border-left: 4px solid var(--accent);
+		}
+
+		.card-header {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 1rem;
+			padding: 1.2rem 1.5rem;
+			background: none;
+			border: 0;
+			color: inherit;
+			font: inherit;
+			text-align: left;
+			cursor: pointer;
+		}
+
+		.card-header:hover {
+			background: rgba(255, 255, 255, .03);
+		}
+
+		.card-header:focus-visible {
+			outline: 2px solid var(--accent);
+			outline-offset: -2px;
+		}
+
+		.card-header h3 {
+			color: var(--accent);
+			font-size: 1.2rem;
+			line-height: 1.3;
+		}
+
+		.card-header h3 small {
+			display: block;
+			color: var(--text);
+			font-size: .95rem;
+			font-weight: 400;
+		}
+
+		.card-header .meta {
+			color: var(--sub);
+			font-size: .85rem;
+			display: flex;
+			gap: 1rem;
+			align-items: center;
+			white-space: nowrap;
+		}
+
+		.chevron {
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6px 6px 0 6px;
+			border-color: var(--accent) transparent transparent transparent;
+			transition: transform .3s ease;
+		}
+
+		.card.active .chevron {
+			transform: rotate(180deg);
+		}
+
+		.card-body {
+			display: grid;
+			grid-template-rows: 0fr;
+			transition: grid-template-rows .4s ease;
+		}
+
+		.card.active .card-body {
+			grid-template-rows: 1fr;
+		}
+
+		.card-inner {
+			overflow: hidden;
+			padding: 0 1.5rem;
+		}
+
+		.card.active .card-inner {
+			padding-bottom: 1.5rem;
+		}
+
+		.card-inner .desc {
+			padding-bottom: .6rem;
+			margin-bottom: .6rem;
+		}
+
+		.card-inner .desc:last-of-type {
+			border-bottom: 1px solid var(--accent);
+		}
+
+		.card-inner .stack {
+			font-size: .85rem;
+			color: var(--sub);
+			margin-bottom: .8rem;
+		}
+
+		.card-inner ul {
+			margin-left: 1.2rem;
+		}
+
+		.card-inner li {
+			margin-bottom: .6rem;
+		}
+
+		.card-inner li::marker {
+			color: var(--accent);
+		}
+
+		.card-inner li b {
+			color: #fff;
+		}
+
+		/* ---------- thumbnails ---------- */
+		.media {
+			display: flex;
+			flex-wrap: wrap;
+			gap: .8rem;
+			margin: .6rem 0;
+		}
+
+		.thumb {
+			width: 80px;
+			height: 80px;
+			border-radius: 8px;
+			object-fit: cover;
+			border: 2px solid var(--accent);
+			cursor: zoom-in;
+			transition: transform .25s;
+			background: #000;
+		}
+
+		.thumb:hover {
+			transform: scale(1.08);
+		}
+
+		a.neon {
+			color: #fff;
+			text-decoration: none;
+			text-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent);
+			transition: text-shadow .3s ease;
+			font-weight: 600;
+		}
+
+		a.neon:hover {
+			text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 30px var(--accent);
+		}
+
+		/* ---------- lightbox ---------- */
+		.lightbox {
+			position: fixed;
+			inset: 0;
+			background: rgba(0, 0, 0, .85);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity .3s;
+			z-index: 999;
+		}
+
+		.lightbox.active {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		.lightbox img,
+		.lightbox video {
+			max-width: 90vw;
+			max-height: 90vh;
+			border-radius: 8px;
+		}
+
+		.lightbox .close {
+			position: absolute;
+			top: 20px;
+			right: 30px;
+			font-size: 2.5rem;
+			color: #fff;
+			cursor: pointer;
+			line-height: 1;
+			background: none;
+			border: 0;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		/* ---------- footer ---------- */
+		footer {
+			text-align: center;
+			padding: 3rem 1rem 2rem;
+			font-size: .85rem;
+			color: var(--sub);
+		}
+
+		/* ---------- animated background ---------- */
+		#chaotic-background {
+			position: fixed;
+			inset: 0;
+			z-index: -1;
+			overflow: hidden;
+		}
+
+		#chaotic-background>span {
+			position: fixed;
+			display: block;
+			background: var(--accent);
+			animation: chaotic-move 10s ease-in-out infinite alternate;
+		}
+
+		@keyframes chaotic-move {
+			0% {
+				transform: translate(0, 0) scale(1) rotate(0deg);
+				opacity: .5;
+			}
+
+			25% {
+				transform: translate(15vw, 15vh) scale(1.2) rotate(45deg);
+				opacity: .8;
+			}
+
+			50% {
+				transform: translate(-10vw, 20vh) scale(.9) rotate(-90deg);
+				opacity: .4;
+			}
+
+			75% {
+				transform: translate(25vw, -10vh) scale(1.1) rotate(135deg);
+				opacity: .7;
+			}
+
+			100% {
+				transform: translate(0, 0) scale(1) rotate(0deg);
+				opacity: .5;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			#chaotic-background {
+				display: none;
+			}
+
+			.card-body,
+			.chevron {
+				transition: none;
+			}
+		}
+
+		@media (max-width: 600px) {
+			header h1 {
+				font-size: 2rem;
+			}
+
+			.card-header {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: .3rem;
+			}
+		}
+
+		/* ---------- print / PDF ---------- */
+		@media print {
+			:root {
+				--bg: #fff;
+				--card: #fff;
+				--text: #111;
+				--sub: #555;
+				--accent: #007a8a;
+			}
+
+			body {
+				font-size: 11pt;
+			}
+
+			#chaotic-background,
+			.media,
+			.print-btn,
+			.chevron,
+			.lightbox {
+				display: none !important;
+			}
+
+			header {
+				padding-top: 0;
+			}
+
+			.card {
+				border-left-width: 2px;
+				break-inside: avoid;
+			}
+
+			.card-body {
+				grid-template-rows: 1fr !important;
+			}
+
+			.card-inner {
+				padding-bottom: 1rem !important;
+			}
+
+			.contacts a::after {
+				content: " (" attr(href) ")";
+				font-size: .75rem;
+			}
+
+			.highlight,
+			.skill-group {
+				border: 1px solid #ccc;
+			}
+
+			a.neon {
+				text-shadow: none;
+				color: var(--accent);
+			}
+		}
+	</style>
 </head>
 
 <body>
-	<div id="chaotic-background"></div>
+	<div id="chaotic-background" aria-hidden="true"></div>
+
 	<header>
 		<h1>Mykola Andrieiev</h1>
-		<p>Unity & Flutter developer</p>
+		<p class="role">Unity (C#) & Flutter Developer</p>
+		<p class="summary">
+			Game and mobile developer with ~7 years of commercial experience. Shipped visual novels on Steam,
+			led four game teams in parallel, built a PvP puzzle game in a 20+ person product team and developed
+			cross-platform Flutter apps with offline mode, GPS and camera. Strong in optimization, Addressables,
+			WebGL builds and third-party SDK integration.
+		</p>
+		<nav class="contacts" aria-label="Contacts">
+			<a href="https://www.linkedin.com/in/babiosik" target="_blank" rel="noopener">
+				<img src="./images/linkedin.png" alt="" width="18" height="18">LinkedIn
+			</a>
+			<a href="https://github.com/Babiosik" target="_blank" rel="noopener">
+				<img src="./images/github.png" alt="" width="18" height="18">GitHub
+			</a>
+			<a href="https://t.me/BabiosikWork" target="_blank" rel="noopener">
+				<img src="./images/telegram.png" alt="" width="18" height="18">Telegram
+			</a>
+			<a href="https://babiosik.itch.io" target="_blank" rel="noopener">itch.io</a>
+			<button type="button" class="print-btn" onclick="printResume()">Download PDF</button>
+		</nav>
 	</header>
 
-	<!--
-	<div class="tabs">
-		<div class="tab active" onclick="switchTab(event, 'unity')">Unity Projects</div>
-		<div class="tab" onclick="switchTab(event, 'flutter')">Flutter Projects</div>
-	</div>
-	-->
-	<div class="content">
-		<div id="unity" class="pane active">
-
-			<div class="card">
-				<h2>Unity Developer, Octo Games</h2>
-				<div class="meta">October 2023 - July 2025</div>
-				<ul>
-					<p class="desc">
-						Developed visual novels on Steam using Unity (C#). Responsible for all technical aspects of the
-						game and preparing builds for release.
-					</p>
-					<p class="desc">
-						Led four simultaneous teams. Monitored deadlines and workload for additional staff.
-					</p>
-					<p class="stack">
-						Stack: Unity (C#), Steamworks.NET, Naninovel, Addressables, Firebase, Amplitude Analytics,
-						NodeJS, MongoDB, RESTfull, Optimization, PrimeTween/DOTween, Physics.
-					</p>
-					<li>Lust Horizon - card collection game like a Heartstone. Implement third-party SDK with spine animations, native
-						bridge, WebGL development, hard optimisation with addressables, multi-threading.
-						<span data-imgages=""></span>
-					</li>
-					<li>Route to the West - significant improvement in mini-games with races.
-						<span data-imgages="./images\OctoGames\route-1.mp4"></span>
-					</li>
-					<li>Sport College - polishing previous features.
-						<span data-imgages="./images\OctoGames\college-2.jpg"></span>
-					</li>
-					<li>Motor, Camera, Action! - integrate simple cooking minigame.
-						<span data-imgages="
-						./images\OctoGames\camera-action-1.jpg,
-						./images\OctoGames\camera-action-2.mp4,
-						./images\OctoGames\camera-action-3.mp4"></span>
-					</li>
-					<li>Hot Miami - integrate racing minigame like a Gran Turismo.
-						<span data-imgages="./images\OctoGames\maiami-3.mp4"></span>
-					</li>
-					<li>Academy of the Shine - integrate new global feature "Phone" and reputation system.
-						<span data-imgages="./images\OctoGames\academy-4.mp4"></span>
-					</li>
-					<li>Detective in the Dark - extend possibility for integrate minigames like a Alan Wake.
-						<span data-imgages="
-							./images\OctoGames\detective-1.jpg,
-							./images\OctoGames\detective-3.jpg,
-							./images\OctoGames\detective-5.mp4"></span>
-					</li>
-					<li>Massage Room - research naninovel framework, implement in company projects.
-						<span data-imgages="./images\OctoGames\massage-3.jpg"></span>
-					</li>
-				</ul>
+	<main>
+		<section aria-labelledby="highlights-title">
+			<h2 id="highlights-title">Highlights</h2>
+			<div class="highlights">
+				<div class="highlight"><strong>~7 years</strong><span>Unity (C#), Flutter, Android</span></div>
+				<div class="highlight"><strong>Steam releases</strong><span>Visual novels with mini-games, Steamworks</span></div>
+				<div class="highlight"><strong>Team lead</strong><span>Four teams in parallel at Octo Games</span></div>
+				<div class="highlight"><strong>Game jam winner</strong><span>1st place, “Best disclosure of the theme”</span></div>
 			</div>
+		</section>
 
-			<div class="card">
-				<h2>Unity Developer, LongRiver Team.</h2>
-				<div class="meta">March 2023 - April 2023</div>
-				<ul>
-					<p class="desc">
-						Participated in a Unity (C#) game jam: fully responsible for all mechanics implementation,
-						procedural level generation, FPS optimisation, and 2D physics.
-					</p>
-					<p class="desc">
-						Grow Down - hyptonic root simulator. 1st place in the ‘Best disclosure of the theme’.
-					</p>
-					<p class="stack">
-						Stack: Unity (C#), 2D Physics, ScriptableObjects, Object Pooling, Profiler.
-					</p>
-					<li>Procedural generation - tile-based level algorithm with difficulty control and balance.</li>
-					<li>Optimisation - pooled objects, Sprite Atlas, Unity Profiler, seamless transition between scenes.
-					</li>
-					<li>2D physics - Rigidbody2D, Colliders, collisions.</li>
-					<span data-imgages="
-						./images/LongRiverTeam/grow-down-1.png,
-						./images/LongRiverTeam/grow-down-2.png,
-						./images/LongRiverTeam/grow-down-3.png"></span>
-					<a class="neon" href="https://babiosik.itch.io/grow-down" target="_blank">itch.io</a>
-				</ul>
+		<section aria-labelledby="skills-title">
+			<h2 id="skills-title">Skills</h2>
+			<div class="skills">
+				<div class="skill-group">
+					<h3>Unity / Games</h3>
+					<ul class="tags">
+						<li>Unity</li>
+						<li>C#</li>
+						<li>Addressables</li>
+						<li>Naninovel</li>
+						<li>Spine</li>
+						<li>WebGL</li>
+						<li>Steamworks.NET</li>
+						<li>PrimeTween / DOTween</li>
+						<li>2D Physics</li>
+						<li>ScriptableObjects</li>
+						<li>Object Pooling</li>
+						<li>Profiler & optimization</li>
+						<li>Multithreading</li>
+						<li>IAP</li>
+						<li>AdMob</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>Mobile</h3>
+					<ul class="tags">
+						<li>Flutter</li>
+						<li>Dart</li>
+						<li>BLoC</li>
+						<li>Dio</li>
+						<li>Hive</li>
+						<li>Offline mode & sync</li>
+						<li>Camera</li>
+						<li>Geolocation</li>
+						<li>Push notifications</li>
+						<li>Android (Java)</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>Backend / Services</h3>
+					<ul class="tags">
+						<li>Node.js</li>
+						<li>MongoDB</li>
+						<li>PostgreSQL</li>
+						<li>REST</li>
+						<li>GraphQL</li>
+						<li>Firebase</li>
+						<li>Amplitude</li>
+						<li>Facebook SDK</li>
+					</ul>
+				</div>
 			</div>
+		</section>
 
-			<div class="card">
-				<h2>Unity Developer, Pixode</h2>
-				<div class="meta">September 2022 - March 2023</div>
-				<ul>
-					<p class="desc">
-						As part of a large product team (20+ people), I developed and maintained the client side of a
-						casual puzzle game on Unity (C#). I implemented online matches, in-app purchases, base building,
-						analytics, and fixed bugs and trained new players.
-					</p>
-					<p class="desc">
-						Soul Battles - puzzle game, Tetris-like.
-					</p>
-					<p class="stack">
-						Stack: Unity (C#), Firebase, Facebook Auth.
-					</p>
-					<li>PvP steal resources - opponent selection via REST API, game state synchronisation.</li>
-					<li>Player base - construction and upgrade system.</li>
-					<li>IAP & Analytics - Firebase and Facebook integration.</li>
-					<li>UI/UX flow - animated pop-ups, screens, rewards.</li>
-					<li>Bug fixes - crash and logic investigation, legacy code refactoring.</li>
-					<span data-imgages="
-						./images/Pixode/soul-battle-1.jpg,
-						./images/Pixode/soul-battle-2.jpg,
-						./images/Pixode/soul-battle-3.jpg"></span>
-				</ul>
-			</div>
+		<section aria-labelledby="experience-title">
+			<h2 id="experience-title">Experience</h2>
 
-			<div class="card">
-				<h2>Flutter Developer, WEZOM</h2>
-				<div class="meta">February 2021 - October 2022</div>
-				<ul>
-					<p class="desc">
-						Developed cross-platform client applications on Flutter (Android, iOS). Implemented complex
-						UI/UX, offline modes, caching, integration with REST/GraphQL, camera and GPS support.
-						Participated in internal B2B solution projects.
-					</p>
-					<p class="stack">
-						Stack: Flutter, BLoC, Dio, Hive, Firebase, camera, background, geolocation, push notifications.
-					</p>
-					<li>EasyLoad TMS - app for planning routes for long-distance drivers with changes in cargo
-						and tracking the condition of the vehicle and cargo. Route scheduling, cargo photo checklists
-						from the camera, data synchronisation when connection is restored.
-						<span data-imgages="
-							./images/WEZOM/easy-load-1.jpg,
-							./images/WEZOM/easy-load-2.jpg,
-							./images/WEZOM/easy-load-3.jpg,
-							./images/WEZOM/easy-load-4.jpg"></span>
-					</li>
-					<li>Tracker for agronomists - a series of applications for tracking the progress of farm fields and
-						the state of machinery. Offline mode, dynamic forms, data synchronisation, camera,
-						verifications.
-						<span data-imgages=""></span>
-					</li>
-					<li>MyService - app for recording car repair service. Dynamic forms, data synchronisation.
-						<span data-imgages="
-							./images/WEZOM/my-service-1.jpg,
-							./images/WEZOM/my-service-2.jpg,
-							./images/WEZOM/my-service-3.jpg,
-							./images/WEZOM/my-service-4.jpg"></span>
+			<article class="card active">
+				<button type="button" class="card-header" aria-expanded="true">
+					<h3>Octo Games <small>Unity Developer</small></h3>
+					<span class="meta">Oct 2023 – Jul 2025<span class="chevron"></span></span>
+				</button>
+				<div class="card-body">
+					<div class="card-inner">
+						<p class="desc">
+							Developed visual novels for Steam in Unity (C#). Owned all technical aspects of the games and
+							prepared release builds.
+						</p>
+						<p class="desc">
+							Led four teams working in parallel; tracked deadlines and workload of additional staff.
+						</p>
+						<p class="stack">
+							Stack: Unity (C#), Steamworks.NET, Naninovel, Addressables, Firebase, Amplitude, Node.js,
+							MongoDB, REST, PrimeTween / DOTween, physics, optimization.
+						</p>
+						<ul>
+							<li><b>Lust Horizon</b> – collectible card game similar to Hearthstone. Integrated a
+								third-party SDK with Spine animations and a native bridge, built for WebGL, heavy
+								optimization with Addressables and multithreading.</li>
+							<li><b>Route to the West</b> – substantially improved the racing mini-games.
+								<div class="media" data-media="./images/OctoGames/route-1.mp4"></div>
+							</li>
+							<li><b>Sport College</b> – polished existing features.
+								<div class="media" data-media="./images/OctoGames/college-2.jpg"></div>
+							</li>
+							<li><b>Motor, Camera, Action!</b> – integrated a cooking mini-game.
+								<div class="media" data-media="
+									./images/OctoGames/camera-action-1.jpg,
+									./images/OctoGames/camera-action-2.mp4,
+									./images/OctoGames/camera-action-3.mp4"></div>
+							</li>
+							<li><b>Hot Miami</b> – integrated a racing mini-game in the spirit of Gran Turismo.
+								<div class="media" data-media="./images/OctoGames/maiami-3.mp4"></div>
+							</li>
+							<li><b>Academy of the Shine</b> – implemented a new global “Phone” feature and a reputation
+								system.
+								<div class="media" data-media="./images/OctoGames/academy-4.mp4"></div>
+							</li>
+							<li><b>Detective in the Dark</b> – extended the engine to support Alan Wake-style
+								mini-games.
+								<div class="media" data-media="
+									./images/OctoGames/detective-1.jpg,
+									./images/OctoGames/detective-3.jpg,
+									./images/OctoGames/detective-5.mp4"></div>
+							</li>
+							<li><b>Massage Room</b> – researched the Naninovel framework and introduced it into the
+								company's projects.
+								<div class="media" data-media="./images/OctoGames/massage-3.jpg"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</article>
 
-					</li>
-					<li>Myastoria - catalogue for shopping and viewing recipes. Catalogue screens, shopping carts,
-						payments, recipes, map of nearby stores.
-						<span data-imgages="
-							./images/WEZOM/myastoria-1.jpg,
-							./images/WEZOM/myastoria-2.jpg,
-							./images/WEZOM/myastoria-3.jpg,
-							./images/WEZOM/myastoria-4.jpg,
-							./images/WEZOM/myastoria-5.jpg"></span>
-					</li>
-					<li>Delivery Groups - app for creating and managing parcels. Data synchronisation, offline mode, map
-						rendering, GPS.
-						<span data-imgages="
-							./images\WEZOM\delivery-group-1.jpg,
-							./images\WEZOM\delivery-group-2.jpg,
-							./images\WEZOM\delivery-group-3.jpg,
-							./images\WEZOM\delivery-group-4.jpg"></span>
-					</li>
-				</ul>
-			</div>
+			<article class="card">
+				<button type="button" class="card-header" aria-expanded="false">
+					<h3>Pixode <small>Unity Developer</small></h3>
+					<span class="meta">Sep 2022 – Mar 2023<span class="chevron"></span></span>
+				</button>
+				<div class="card-body">
+					<div class="card-inner">
+						<p class="desc">
+							As part of a large product team (20+ people), developed and maintained the client side of
+							<b>Soul Battles</b>, a casual Tetris-like puzzle game in Unity (C#). Implemented online
+							matches, in-app purchases, base building and analytics, fixed bugs and onboarded new team
+							members.
+						</p>
+						<p class="stack">Stack: Unity (C#), Firebase, Facebook Auth, REST.</p>
+						<ul>
+							<li><b>PvP resource stealing</b> – opponent selection via REST API, game state
+								synchronization.</li>
+							<li><b>Player base</b> – construction and upgrade system.</li>
+							<li><b>IAP & analytics</b> – Firebase and Facebook integration.</li>
+							<li><b>UI/UX flow</b> – animated pop-ups, screens, rewards.</li>
+							<li><b>Bug fixing</b> – crash and logic investigation, legacy code refactoring.</li>
+						</ul>
+						<div class="media" data-media="
+							./images/Pixode/soul-battle-1.jpg,
+							./images/Pixode/soul-battle-2.jpg,
+							./images/Pixode/soul-battle-3.jpg"></div>
+					</div>
+				</div>
+			</article>
 
-			<div class="card">
-				<h2>Android Java Developer, SoftcBay</h2>
-				<div class="meta">November 2019 - Jule 2020</div>
-				<ul>
-					<p class="desc">
-						Develop fork of Telegram for Android. Implemented new features, fixed bugs.
-					</p>
-					<p class="stack">
-						Stack: Java, Android Studio.
-					</p>
-					<span data-imgages=""></span>
-				</ul>
-			</div>
+			<article class="card">
+				<button type="button" class="card-header" aria-expanded="false">
+					<h3>WEZOM <small>Flutter Developer</small></h3>
+					<span class="meta">Feb 2021 – Oct 2022<span class="chevron"></span></span>
+				</button>
+				<div class="card-body">
+					<div class="card-inner">
+						<p class="desc">
+							Developed cross-platform client apps in Flutter (Android, iOS). Implemented complex UI/UX,
+							offline mode, caching, REST/GraphQL integration, camera and GPS support. Took part in
+							internal B2B projects.
+						</p>
+						<p class="stack">
+							Stack: Flutter, BLoC, Dio, Hive, Firebase, camera, background services, geolocation, push
+							notifications.
+						</p>
+						<ul>
+							<li><b>EasyLoad TMS</b> – route planning for long-haul drivers with changing cargo and
+								tracking of vehicle and cargo condition. Route scheduling, cargo photo checklists,
+								data synchronization when the connection is restored.
+								<div class="media" data-media="
+									./images/WEZOM/easy-load-1.jpg,
+									./images/WEZOM/easy-load-2.jpg,
+									./images/WEZOM/easy-load-3.jpg,
+									./images/WEZOM/easy-load-4.jpg"></div>
+							</li>
+							<li><b>Tracker for agronomists</b> – a series of apps for tracking the progress of farm
+								fields and the state of machinery. Offline mode, dynamic forms, data synchronization,
+								camera, verification.</li>
+							<li><b>MyService</b> – booking app for car repair services. Dynamic forms, data
+								synchronization.
+								<div class="media" data-media="
+									./images/WEZOM/my-service-1.jpg,
+									./images/WEZOM/my-service-2.jpg,
+									./images/WEZOM/my-service-3.jpg,
+									./images/WEZOM/my-service-4.jpg"></div>
+							</li>
+							<li><b>Myastoria</b> – shopping catalog with recipes. Catalog screens, shopping cart,
+								payments, recipes, map of nearby stores.
+								<div class="media" data-media="
+									./images/WEZOM/myastoria-1.jpg,
+									./images/WEZOM/myastoria-2.jpg,
+									./images/WEZOM/myastoria-3.jpg,
+									./images/WEZOM/myastoria-4.jpg,
+									./images/WEZOM/myastoria-5.jpg"></div>
+							</li>
+							<li><b>Delivery Groups</b> – app for creating and managing parcels. Data synchronization,
+								offline mode, map rendering, GPS.
+								<div class="media" data-media="
+									./images/WEZOM/delivery-group-1.jpg,
+									./images/WEZOM/delivery-group-2.jpg,
+									./images/WEZOM/delivery-group-3.jpg,
+									./images/WEZOM/delivery-group-4.jpg"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</article>
 
-			<div class="card">
-				<h2>Mobile Developer, Sandwich Inc.</h2>
-				<div class="meta">August 2018 - August 2021</div>
-				<ul>
-					<p class="desc">
-						In indie team, I developed casual and hyper-casual games using Unity (C#). Later, I switched to
-						Flutter and brushed up on NodeJS.
-					</p>
-					<p class="stack">
-						Stack: Unity (C#), Flutter (Dart), NodeJS.
-					</p>
-					<li>Magic 8-ball - Funny game with random answers after shake phone. Unity/C#. Animations, physics,
-						haptic feedback, AdMob.
-<span data-imgages="
-							./images/SandwichInc/magic-8-ball-1.webp,
-							./images/SandwichInc/magic-8-ball-2.webp"></span>
-					</li>
-					<li>Coin Flip - Funny coin flipping game. Unity/C#: 3D coin physics, haptic feedback, AdMob.
-<span data-imgages=""></span>
-					</li>
-					<li>Bip WatchFace - catalogue of visual firmware. Flutter (REST, Hive): smooth image loading,
-						offline gallery of favourites, collection of like statistics.
-<span data-imgages="
-							./images/SandwichInc/bip-watch-face.webp"></span>
-					</li>
-					<li>
-						Card Bin Checker - QoL app. Flutter (Dio, REST): integration with third-party services via REST
-						API.
-<span data-imgages="
-							./images/SandwichInc/bin-card-checker-1.webp,
-							./images/SandwichInc/bin-card-checker-2.webp"></span>
-					</li>
-					<li>Telegram RPG - text-based RPG in a bot. NodeJS (Telegraf, PostgreSQL): story branches, progress
-						saving.
-<span data-imgages=""></span>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+			<article class="card">
+				<button type="button" class="card-header" aria-expanded="false">
+					<h3>Sandwich Inc. <small>Mobile Developer</small></h3>
+					<span class="meta">Aug 2018 – Aug 2021<span class="chevron"></span></span>
+				</button>
+				<div class="card-body">
+					<div class="card-inner">
+						<p class="desc">
+							In an indie team, developed casual and hyper-casual games in Unity (C#). Later moved to
+							Flutter and Node.js.
+						</p>
+						<p class="stack">Stack: Unity (C#), Flutter (Dart), Node.js, PostgreSQL, AdMob.</p>
+						<ul>
+							<li><b>Magic 8-Ball</b> – fun app that gives a random answer when you shake the phone.
+								Unity (C#): animations, physics, haptic feedback, AdMob.
+								<div class="media" data-media="
+									./images/SandwichInc/magic-8-ball-1.webp,
+									./images/SandwichInc/magic-8-ball-2.webp"></div>
+							</li>
+							<li><b>Coin Flip</b> – coin flipping game. Unity (C#): 3D coin physics, haptic feedback,
+								AdMob.</li>
+							<li><b>Bip WatchFace</b> – catalog of watch faces. Flutter (REST, Hive): smooth image
+								loading, offline gallery of favorites, like statistics.
+								<div class="media" data-media="./images/SandwichInc/bip-watch-face.webp"></div>
+							</li>
+							<li><b>Card BIN Checker</b> – utility app. Flutter (Dio, REST): integration with
+								third-party services via REST API.
+								<div class="media" data-media="
+									./images/SandwichInc/bin-card-checker-1.webp,
+									./images/SandwichInc/bin-card-checker-2.webp"></div>
+							</li>
+							<li><b>Telegram RPG</b> – text-based RPG in a Telegram bot. Node.js (Telegraf,
+								PostgreSQL): story branches, progress saving.</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+
+			<article class="card">
+				<button type="button" class="card-header" aria-expanded="false">
+					<h3>SoftcBay <small>Android Developer (Java)</small></h3>
+					<span class="meta">Nov 2019 – Jul 2020<span class="chevron"></span></span>
+				</button>
+				<div class="card-body">
+					<div class="card-inner">
+						<p class="desc">Developed a fork of Telegram for Android: implemented new features and fixed
+							bugs.</p>
+						<p class="stack">Stack: Java, Android SDK, Android Studio.</p>
+					</div>
+				</div>
+			</article>
+		</section>
+
+		<section aria-labelledby="projects-title">
+			<h2 id="projects-title">Projects & Achievements</h2>
+
+			<article class="card">
+				<button type="button" class="card-header" aria-expanded="false">
+					<h3>Grow Down <small>Game jam · LongRiver Team · 1st place “Best disclosure of the theme”</small>
+					</h3>
+					<span class="meta">Mar 2023 – Apr 2023<span class="chevron"></span></span>
+				</button>
+				<div class="card-body">
+					<div class="card-inner">
+						<p class="desc">
+							Hypnotic root simulator made in Unity (C#) during a game jam. Fully responsible for all
+							mechanics, procedural level generation, FPS optimization and 2D physics.
+						</p>
+						<p class="stack">Stack: Unity (C#), 2D Physics, ScriptableObjects, Object Pooling, Profiler.
+						</p>
+						<ul>
+							<li><b>Procedural generation</b> – tile-based level algorithm with difficulty and balance
+								control.</li>
+							<li><b>Optimization</b> – object pooling, Sprite Atlas, Unity Profiler, seamless scene
+								transitions.</li>
+							<li><b>2D physics</b> – Rigidbody2D, colliders, collisions.</li>
+						</ul>
+						<div class="media" data-media="
+							./images/LongRiverTeam/grow-down-1.png,
+							./images/LongRiverTeam/grow-down-2.png,
+							./images/LongRiverTeam/grow-down-3.png"></div>
+						<a class="neon" href="https://babiosik.itch.io/grow-down" target="_blank" rel="noopener">Play on
+							itch.io</a>
+					</div>
+				</div>
+			</article>
+		</section>
+	</main>
 
 	<footer>
-		<div>
-			Mykola Andrieiev 2025 • Unity & Flutter developer
-		</div>
-		<div style="display:inline-flex; gap:20px; align-items:center;">
-			<a href="https://www.linkedin.com/in/babiosik" target="_blank" aria-label="LinkedIn">
-				<img src="./images/linkedin.png" alt="LinkedIn" width="32" height="32">
-			</a>
-			<a href="https://github.com/Babiosik" target="_blank" aria-label="GitHub">
-				<img src="./images/github.png" alt="GitHub" width="32" height="32">
-			</a>
-			<a href="https://t.me/BabiosikWork" target="_blank" aria-label="Telegram">
-				<img src="./images/telegram.png" alt="Telegram" width="32" height="32">
-			</a>
-		</div>
+		© <span id="year">2026</span> Mykola Andrieiev · Unity & Flutter Developer
 	</footer>
 
-	<div id="lightbox" class="lightbox">
-		<span class="close">&times;</span>
-		<img class="dnone" src="" alt="enlarged">
-		<video class="dnone" src="" alt="enlarged">
+	<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Media preview">
+		<button type="button" class="close" aria-label="Close">&times;</button>
+		<img class="hidden" alt="Project screenshot">
+		<video class="hidden" controls playsinline></video>
 	</div>
 
 	<script>
+		/* ---------- accordion ---------- */
 		document.querySelectorAll('.card').forEach(card => {
-			/* wrap content */
-			const header = document.createElement('div');
-			header.className = 'card-header';
-			const body = document.createElement('div');
-			body.className = 'card-body';
-			Array.from(card.children).forEach(child => body.appendChild(child));
-
-			const h2 = body.querySelector('h2');
-			const meta = body.querySelector('.meta');
-			header.appendChild(h2);
-			if (meta) header.appendChild(meta);
-			meta.innerHTML += '<div class="chevron"></div>';
-
-			card.appendChild(header);
-			card.appendChild(body);
-
-			/* accordion toggle */
-			header.addEventListener('click', () => card.classList.toggle('active'));
-
-			/* -------- decorate <span data-img=""> -------- */
-			document.querySelectorAll('span[data-imgages]').forEach(span => {
-				const urlList = span.dataset.imgages.trim();
-				if (!urlList) {
-					span.classList.add('no-images');
-					span.innerHTML = 'No images';
-					return;
-				}
-
-				span.classList.add('has-thumb');
-
-				const urls = urlList.split(',').map(u => u.trim());
-
-				span.innerHTML = '';
-				urls.forEach(url => {
-					if (url.endsWith('.mp4')) {
-						span.innerHTML += `<video class="span-thumb" src="${url}" alt="thumb"></video>`;
-					} else {
-						span.innerHTML += `<img class="span-thumb" src="${url}" alt="thumb">`;
-					}
-				});
+			const header = card.querySelector('.card-header');
+			header.addEventListener('click', () => {
+				const open = card.classList.toggle('active');
+				header.setAttribute('aria-expanded', open);
 			});
-
-			/* -------- light-box logic -------- */
-			const box = document.getElementById('lightbox');
-			const boxImg = box.querySelector('img');
-			const boxVideo = box.querySelector('video');
-			const close = box.querySelector('.close');
-
-			document.addEventListener('click', e => {
-				if (e.target.classList.contains('span-thumb')) {
-					if (e.target.src.endsWith('.mp4')) {
-						boxVideo.src = e.target.src;
-						boxVideo.load();
-						boxVideo.play();
-						boxVideo.classList.remove('dnone');
-					} else {
-						boxImg.src = e.target.src;
-						boxImg.classList.remove('dnone');
-					}
-					box.classList.add('active');
-				}
-			});
-			close.onclick = () => {
-				box.classList.remove('active');
-				boxVideo.pause();
-				boxVideo.currentTime = 0;
-				boxImg.classList.add('dnone');
-				boxVideo.classList.add('dnone');
-			};
-			box.onclick = e => close.onclick();
 		});
 
-		/* chaotic background */
-		let count = randomInt(32, 48);
+		/* ---------- thumbnails ---------- */
+		document.querySelectorAll('[data-media]').forEach(container => {
+			const urls = container.dataset.media.split(',').map(u => u.trim()).filter(Boolean);
+			if (!urls.length) {
+				container.remove();
+				return;
+			}
+			urls.forEach(url => {
+				let el;
+				if (url.endsWith('.mp4')) {
+					el = document.createElement('video');
+					el.src = url + '#t=0.1';
+					el.preload = 'metadata';
+					el.muted = true;
+					el.playsInline = true;
+				} else {
+					el = document.createElement('img');
+					el.src = url;
+					el.loading = 'lazy';
+					el.alt = 'Project screenshot';
+				}
+				el.className = 'thumb';
+				el.dataset.full = url;
+				el.tabIndex = 0;
+				container.appendChild(el);
+			});
+		});
+
+		/* ---------- lightbox ---------- */
+		const box = document.getElementById('lightbox');
+		const boxImg = box.querySelector('img');
+		const boxVideo = box.querySelector('video');
+
+		function openLightbox(url) {
+			if (url.endsWith('.mp4')) {
+				boxVideo.src = url;
+				boxVideo.classList.remove('hidden');
+				boxVideo.play().catch(() => { });
+			} else {
+				boxImg.src = url;
+				boxImg.classList.remove('hidden');
+			}
+			box.classList.add('active');
+		}
+
+		function closeLightbox() {
+			box.classList.remove('active');
+			boxVideo.pause();
+			boxVideo.removeAttribute('src');
+			boxVideo.load();
+			boxImg.classList.add('hidden');
+			boxVideo.classList.add('hidden');
+		}
+
+		document.addEventListener('click', e => {
+			if (e.target.classList.contains('thumb')) openLightbox(e.target.dataset.full);
+		});
+		document.addEventListener('keydown', e => {
+			if (e.key === 'Escape' && box.classList.contains('active')) closeLightbox();
+			if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('thumb')) {
+				openLightbox(e.target.dataset.full);
+			}
+		});
+		box.addEventListener('click', e => {
+			if (e.target === box || e.target.classList.contains('close')) closeLightbox();
+		});
+
+		/* ---------- PDF (print) ---------- */
+		function printResume() {
+			window.print();
+		}
+
+		/* ---------- footer year ---------- */
+		document.getElementById('year').textContent = new Date().getFullYear();
+
+		/* ---------- animated background ---------- */
+		function randomInt(min, max) {
+			return Math.floor(Math.random() * (max - min)) + min;
+		}
+
+		const bg = document.getElementById('chaotic-background');
+		const count = randomInt(32, 48);
 		for (let i = 0; i < count; i++) {
-			let size = randomInt(6, 14);
+			const size = randomInt(6, 14);
 			const span = document.createElement('span');
 			span.style.left = randomInt(0, 100) + '%';
 			span.style.top = randomInt(0, 100) + '%';
@@ -346,373 +953,9 @@
 			span.style.opacity = randomInt(60, 100) / 100;
 			span.style.borderRadius = randomInt(0, 30) + '%';
 			span.style.filter = `blur(${randomInt(0, 15) / 10}px)`;
-			document.querySelector('#chaotic-background').appendChild(span);
+			bg.appendChild(span);
 		}
-
-		function randomInt(min, max) {
-			return Math.floor(Math.random() * (max - min)) + min;
-		}
-
-		function simpleHash(str) {
-			let h = 0;
-			for (let i = 0; i < str.length; i++) {
-				h = (h << 5) - h + str.charCodeAt(i);
-				h = h & h;                 // 32-bit
-			}
-			return h >>> 0;
-		}
-
-		function collect() {
-			const data = [];
-
-			data.push(navigator.userAgent);
-			data.push(screen.width + 'x' + screen.height + '-' + screen.colorDepth);
-			data.push(Intl.DateTimeFormat().resolvedOptions().timeZone);
-			data.push(navigator.language);
-			data.push(navigator.hardwareConcurrency);
-			data.push(window.devicePixelRatio);
-
-			return simpleHash(data.join('|'));
-		}
-
-		setTimeout(() => {
-			let fp = collect();
-
-			let params = ['Site visited', fp, Intl.DateTimeFormat().resolvedOptions().timeZone];
-			fetch(`https://api.telegram.org/bot1752529132:AAEvKyDS9LzYOuTh2Cv3raQlCig4-YZGjjA/sendMessage?chat_id=857242887&text=${encodeURI(params.join('\n'))}`);
-		}, 5000);
 	</script>
 </body>
-
-<style>
-	:root {
-		--bg: #111;
-		--card: #1a1a1a;
-		--accent: #00e5ff;
-		--text: #e0e0e0;
-		--sub: #888;
-	}
-
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-		font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	}
-
-	body {
-		background: var(--bg);
-		color: var(--text);
-		line-height: 1.6;
-	}
-
-	header {
-		text-align: center;
-		padding: 3rem 1rem 2rem;
-	}
-
-	header h1 {
-		font-size: 2.5rem;
-		letter-spacing: 1px;
-		margin-bottom: .5rem;
-	}
-
-	header p {
-		color: var(--sub);
-	}
-
-	.tabs {
-		display: flex;
-		justify-content: center;
-		gap: .5rem;
-		padding: 0 1rem;
-	}
-
-	.tab {
-		padding: .75rem 2rem;
-		cursor: pointer;
-		border: 2px solid transparent;
-		background: var(--card);
-		color: var(--sub);
-		font-weight: 600;
-		border-radius: 30px;
-		transition: all .3s ease;
-	}
-
-	.tab.active {
-		color: var(--accent);
-		border-color: var(--accent);
-	}
-
-	.content {
-		max-width: 1000px;
-		margin: 2rem auto;
-		padding: 0 1rem;
-	}
-
-	.pane {
-		display: none;
-		animation: fade .6s ease;
-	}
-
-	.pane.active {
-		display: block;
-	}
-
-	@keyframes fade {
-		from {
-			opacity: 0;
-			transform: translateY(10px);
-		}
-
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	.card {
-		background: var(--card);
-		border-radius: 12px;
-		margin-bottom: 1rem;
-		overflow: hidden;
-		border-left: 4px solid var(--accent);
-	}
-
-	.card-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1.2rem 1.5rem;
-		cursor: pointer;
-		user-select: none;
-	}
-
-	.card-header:hover {
-		background: rgba(255, 255, 255, .03);
-	}
-
-	.card-header h2 {
-		color: var(--accent);
-		font-size: 1.25rem;
-	}
-
-	.card-header .meta {
-		color: var(--sub);
-		font-size: .85rem;
-		text-align: right;
-		display: flex;
-		gap: 1rem;
-		align-items: center;
-	}
-
-	.card-header .chevron {
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 6px 6px 0 6px;
-		border-color: var(--accent) transparent transparent transparent;
-		transition: transform .3s ease;
-	}
-
-	.card.active .chevron {
-		transform: rotate(180deg);
-	}
-
-	.card-body {
-		max-height: 0;
-		padding: 0 1.5rem;
-		overflow: hidden;
-		transition: max-height .4s ease, padding .4s ease;
-	}
-
-	.card.active .card-body {
-		max-height: max-content;
-		/* enough for long content */
-		padding-bottom: 1.5rem;
-	}
-
-	.card-body ul {
-		margin-left: 1.2rem;
-		padding-top: 1rem;
-		color: var(--text);
-	}
-
-	.card-body ul p {
-		margin-bottom: .5rem;
-		padding-bottom: .5rem;
-	}
-
-	.card-body ul p.desc {
-		color: var(--text);
-		border-bottom: 1px solid var(--accent);
-	}
-
-	.card-body ul p.stack {
-		font-size: .85rem;
-		color: var(--sub);
-	}
-
-	.card-body ul li::marker {
-		color: var(--accent);
-	}
-
-	span.no-images {
-		display: block;
-		color: var(--sub);
-		font-size: .9rem;
-		margin-bottom: .5rem;
-	}
-
-	footer {
-		text-align: center;
-		padding: 3rem 1rem 2rem;
-		font-size: .85rem;
-		color: var(--sub);
-	}
-
-	footer>div {
-		margin-bottom: 1rem;
-	}
-
-	a>img:hover {
-		opacity: .75;
-		transform: scale(1.05);
-		transition: opacity .25s ease, transform .25s ease;
-	}
-
-	/* ---- span with image ---- */
-
-	.has-thumb {
-		list-style: none;
-		/* remove native bullet */
-		padding-left: 0;
-		margin: .8rem 0;
-		display: flex;
-		gap: 1rem;
-		align-items: flex-start;
-	}
-
-	.has-thumb .span-text {
-		flex: 0 0 70%;
-	}
-
-	.has-thumb .span-thumb {
-		flex: 0 0 80px;
-		height: 80px;
-		border-radius: 8px;
-		object-fit: cover;
-		border: 2px solid var(--accent);
-		cursor: zoom-in;
-		transition: transform .25s;
-	}
-
-	.has-thumb .span-thumb:hover {
-		transform: scale(1.08);
-	}
-
-	/* ---- light-box (re-used for every picture) ---- */
-	.lightbox {
-		position: fixed;
-		inset: 0;
-		background: rgba(0, 0, 0, .85);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		opacity: 0;
-		pointer-events: none;
-		transition: opacity .3s;
-		z-index: 999;
-	}
-
-	.lightbox.active {
-		opacity: 1;
-		pointer-events: auto;
-	}
-
-	.lightbox img,
-	.lightbox video {
-		max-width: 90vw;
-		max-height: 90vh;
-		border-radius: 8px;
-	}
-
-	.lightbox .close {
-		position: absolute;
-		top: 20px;
-		right: 30px;
-		font-size: 2.5rem;
-		color: #fff;
-		cursor: pointer;
-		line-height: 1;
-	}
-
-	.lightbox .dnone {
-		display: none;
-	}
-
-	/* Background container */
-	#chaotic-background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		/* filter: blur(1px); */
-		overflow: hidden;
-	}
-
-	/* Individual particle/static elements */
-	#chaotic-background>span {
-		position: fixed;
-		display: block;
-		background: var(--accent);
-
-		/* Animation base */
-		animation: chaotic-move 10s ease-in-out infinite alternate;
-	}
-
-	/* Keyframes for the chaotic movement */
-	@keyframes chaotic-move {
-		0% {
-			transform: translate(0, 0) scale(1) rotate(0deg);
-			opacity: 0.5;
-		}
-
-		25% {
-			transform: translate(15vw, 15vh) scale(1.2) rotate(45deg);
-			opacity: 0.8;
-		}
-
-		50% {
-			transform: translate(-10vw, 20vh) scale(0.9) rotate(-90deg);
-			opacity: 0.4;
-		}
-
-		75% {
-			transform: translate(25vw, -10vh) scale(1.1) rotate(135deg);
-			opacity: 0.7;
-		}
-
-		100% {
-			transform: translate(0, 0) scale(1) rotate(0deg);
-			opacity: 0.5;
-		}
-	}
-
-	a.neon {
-		color: #fff;
-		text-decoration: none;
-		text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
-		transition: all 0.3s ease;
-		font-weight: 600;
-	}
-
-	a.neon:hover {
-		text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff, 0 0 30px #00e5ff;
-	}
-</style>
-
 
 </html>
