@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mykola Andrieiev – CV</title>
+	<meta name="robots" content="noindex">
+	<style>
+		@page {
+			size: A4;
+			margin: 13mm 14mm;
+		}
+
+		:root {
+			--accent: #007a8a;
+			--text: #1a1a1a;
+			--sub: #555;
+			--line: #cfd8da;
+		}
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+			font-size: 10.2pt;
+			line-height: 1.45;
+			color: var(--text);
+			background: #fff;
+		}
+
+		.page {
+			max-width: 182mm;
+			margin: 0 auto;
+		}
+
+		a {
+			color: var(--accent);
+			text-decoration: none;
+		}
+
+		/* header */
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			gap: 1rem;
+			padding-bottom: 6pt;
+			border-bottom: 2px solid var(--accent);
+		}
+
+		h1 {
+			font-size: 21pt;
+			line-height: 1.1;
+			letter-spacing: .5px;
+		}
+
+		.role {
+			color: var(--accent);
+			font-weight: 600;
+			font-size: 11pt;
+		}
+
+		.contacts {
+			list-style: none;
+			text-align: right;
+			font-size: 8.8pt;
+			line-height: 1.45;
+		}
+
+		.summary {
+			margin-top: 7pt;
+		}
+
+		/* sections */
+		h2 {
+			font-size: 10pt;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			color: var(--accent);
+			border-bottom: 1px solid var(--line);
+			padding-bottom: 2pt;
+			margin: 13pt 0 6pt;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			gap: 1.5pt 10pt;
+		}
+
+		.skills dt {
+			font-weight: 600;
+		}
+
+		/* jobs */
+		.job {
+			margin-bottom: 9pt;
+		}
+
+		.job-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			gap: 1rem;
+			break-after: avoid;
+		}
+
+		.job-head h3 {
+			font-size: 10.5pt;
+		}
+
+		.job-head h3 span {
+			font-weight: 400;
+			color: var(--sub);
+		}
+
+		.when {
+			color: var(--sub);
+			font-size: 8.8pt;
+			white-space: nowrap;
+		}
+
+		.job p {
+			margin-top: 1.5pt;
+		}
+
+		.stack {
+			color: var(--sub);
+			font-size: 8.8pt;
+		}
+
+		ul {
+			margin: 2.5pt 0 0 13pt;
+		}
+
+		li {
+			margin-bottom: 1.5pt;
+			break-inside: avoid;
+		}
+
+		li::marker {
+			color: var(--accent);
+		}
+
+		b {
+			font-weight: 600;
+		}
+
+		.highlights {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 7pt;
+			margin-top: 9pt;
+		}
+
+		.highlights div {
+			border-top: 2px solid var(--accent);
+			background: #f2f7f8;
+			padding: 4pt 7pt 5pt;
+			font-size: 8.8pt;
+			color: var(--sub);
+			line-height: 1.3;
+		}
+
+		.highlights strong {
+			display: block;
+			font-size: 11.5pt;
+			color: var(--accent);
+		}
+
+		.two-col {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 0 14pt;
+		}
+
+		@media screen {
+			body {
+				background: #e9eeef;
+			}
+
+			.page {
+				background: #fff;
+				padding: 13mm 14mm;
+				margin: 1.5rem auto;
+				max-width: 210mm;
+				box-shadow: 0 2px 12px rgba(0, 0, 0, .15);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="page">
+		<header>
+			<div>
+				<h1>Mykola Andrieiev</h1>
+				<p class="role">Unity (C#) &amp; Flutter Developer</p>
+			</div>
+			<ul class="contacts">
+				<li><a href="https://babiosik.github.io">babiosik.github.io</a> – portfolio with videos</li>
+				<li><a href="https://www.linkedin.com/in/babiosik">linkedin.com/in/babiosik</a></li>
+				<li><a href="https://github.com/Babiosik">github.com/Babiosik</a> · <a href="https://babiosik.itch.io">babiosik.itch.io</a></li>
+				<li>Telegram: <a href="https://t.me/BabiosikWork">@BabiosikWork</a></li>
+			</ul>
+		</header>
+
+		<p class="summary">
+			Game and mobile developer with 5+ years of commercial experience, building games since 2018. Built
+			multiplayer Snapchat games with 945M+ plays combined, worked on 8 visual novels released on Steam (1,000+
+			reviews, up to 86% positive), led four game teams in parallel, and developed cross-platform Flutter apps
+			with offline mode, GPS and camera. Strong in optimization, Addressables, WebGL builds and third-party SDK
+			integration.
+		</p>
+
+		<div class="highlights">
+			<div><strong>5+ years</strong>Commercial: Unity (C#), Flutter, Android</div>
+			<div><strong>945M+ plays</strong>Multiplayer games on Snapchat</div>
+			<div><strong>8 Steam releases</strong>1,000+ reviews, up to 86% positive</div>
+			<div><strong>Team lead</strong>Four teams in parallel at Octo Games</div>
+		</div>
+
+		<h2>Skills</h2>
+		<dl class="skills">
+			<dt>Unity / Games</dt>
+			<dd>Unity, C#, Addressables, Zenject, Naninovel, Ink, Spine, WebGL, Steamworks.NET, PrimeTween / DOTween,
+				2D physics, object pooling, Profiler &amp; optimization, multithreading, IAP, AdMob</dd>
+			<dt>Snapchat</dt>
+			<dd>Lens Studio, JavaScript / TypeScript, AR, multiplayer, AI-assisted development</dd>
+			<dt>Mobile</dt>
+			<dd>Flutter, Dart, BLoC, Dio, Hive, offline mode &amp; sync, camera, geolocation, push notifications, Android
+				(Java)</dd>
+			<dt>Backend / Services</dt>
+			<dd>Node.js, MongoDB, PostgreSQL, REST, GraphQL, Firebase, Amplitude, Facebook SDK</dd>
+		</dl>
+
+		<h2>Experience</h2>
+
+		<div class="job">
+			<div class="job-head">
+				<h3>SplendidScore Ukraine <span>· Game Developer · Remote</span></h3>
+				<span class="when">Feb 2026 – Oct 2026</span>
+			</div>
+			<p>AR lenses and social games played inside Snapchat, from AR filters to a turn-based chat game and
+				real-time multiplayer games for groups of friends. Brought AI-assisted development tools into the
+				team’s workflow.</p>
+			<ul>
+				<li><b>Color Match</b> (905M+ plays) – race across colored platforms; when the timer runs out, every
+					platform of another color disappears.</li>
+				<li><b>Zombie Escape</b> (29M+ plays) – asynchronous infection game: one random player becomes the
+					zombie and hunts the others while survivors run and hide.</li>
+				<li><b>Gobble Watch</b> (13M+ plays) – red light, green light: players race to a turkey and must freeze
+					when it turns; anyone still moving goes back to the start.</li>
+				<li><b>Turn-based chat game</b> – Battleship-style game on a 4×4 board, built in 1.5 months; plus AR
+					lenses during the first month.</li>
+			</ul>
+			<p class="stack">Stack: Lens Studio, JavaScript / TypeScript, AR, multiplayer.</p>
+		</div>
+
+		<div class="job">
+			<div class="job-head">
+				<h3>Octo Games <span>· Unity Developer</span></h3>
+				<span class="when">Oct 2023 – Jul 2025</span>
+			</div>
+			<p>Narrative games for Steam in Unity (C#): visual novels with gameplay mini-games for an adult (18+)
+				audience. Owned all technical aspects and release builds. Eight titles shipped in Dec 2023 – Nov 2024,
+				1,000+ Steam reviews combined, best-rated 86% positive. Led four teams in parallel and tracked deadlines
+				and workload of additional staff.</p>
+			<ul>
+				<li><b>Collectible card game (WebGL)</b> – Hearthstone-style browser card battler on Zenject with IAP;
+					story in Ink as visual-novel scenes with Spine animations and chat-style dialogues. Integrated a
+					third-party SDK through a native bridge; optimized with Addressables and multithreading.</li>
+				<li><b>Company-wide systems</b> – introduced the Naninovel framework (engine of every later title),
+					built the in-game “Phone” reused in every following novel, a reputation system adopted across the
+					company, and the project template all my teams started from.</li>
+				<li><b>Mini-games</b> – basketball tactics (rock-paper-scissors), racing, cooking and Alan Wake-style
+					investigation; video calls and achievement-unlocked wallpapers in the in-game phone.</li>
+			</ul>
+			<p class="stack">Stack: Unity (C#), Steamworks.NET, Naninovel, Ink, Zenject, Addressables, Unity IAP,
+				Firebase, Amplitude, Node.js, MongoDB, REST, PrimeTween / DOTween.</p>
+		</div>
+
+		<div class="job">
+			<div class="job-head">
+				<h3>Pixode <span>· Unity Developer</span></h3>
+				<span class="when">Sep 2022 – Mar 2023</span>
+			</div>
+			<p>Client side of <b>Soul Battles</b>, a casual Tetris-like puzzle game, in a 20+ person product team.</p>
+			<ul>
+				<li>PvP resource stealing – opponent selection via REST API and game state synchronization.</li>
+				<li>Player base construction and upgrades; IAP and analytics with Firebase and Facebook.</li>
+				<li>Animated UI flow, crash and logic investigation, legacy refactoring, onboarding new team members.</li>
+			</ul>
+		</div>
+
+		<div class="job">
+			<div class="job-head">
+				<h3>WEZOM <span>· Flutter Developer</span></h3>
+				<span class="when">Feb 2021 – Oct 2022</span>
+			</div>
+			<p>Cross-platform client apps in Flutter (Android, iOS): complex UI/UX, offline mode, caching, REST/GraphQL,
+				camera and GPS.</p>
+			<ul>
+				<li><b>EasyLoad TMS</b> – route planning for long-haul drivers: scheduling, cargo photo checklists, data
+					sync when the connection is restored.</li>
+				<li><b>Tracker for agronomists</b> – series of apps for field progress and machinery: offline mode,
+					dynamic forms, camera, verification.</li>
+				<li><b>Delivery Groups</b> – parcel management app; fully rewrote the codebase; offline mode, maps, GPS.
+				</li>
+				<li><b>Myastoria, MyService</b> – shopping catalog with payments and deep links; car-service booking.</li>
+			</ul>
+		</div>
+
+		<div class="job">
+			<div class="job-head">
+				<h3>SoftcBay <span>· Android Developer (Java)</span></h3>
+				<span class="when">Nov 2019 – Jul 2020</span>
+			</div>
+			<p>Telegram fork for Android: ghost mode, channel news feed and tabbed chat folders (shipped before the
+				official client added folders); bug fixing.</p>
+		</div>
+
+		<h2>Indie &amp; Side Projects</h2>
+		<div class="job">
+			<div class="job-head">
+				<h3>Sandwich Inc. <span>· indie team, alongside studies and work</span></h3>
+				<span class="when">2018 – 2021</span>
+			</div>
+			<p>Built and published our own Google Play apps end to end, US$700+ AdMob revenue: <b>Magic 8-Ball</b>
+				(Unity, 20,000+ downloads) and <b>Bip WatchFace</b> (Flutter, 5,000+ downloads).</p>
+		</div>
+		<div class="job">
+			<div class="job-head">
+				<h3>Grow Down <span>· game jam, 1st place “Best disclosure of the theme”</span></h3>
+				<span class="when">Feb 2023 – Apr 2023</span>
+			</div>
+			<p>Root simulator in Unity: one-week jam, then two more months of development. Procedural level generation,
+				2D physics, object pooling and FPS optimization. <a href="https://babiosik.itch.io/grow-down">Play on
+					itch.io</a></p>
+		</div>
+
+		<div class="two-col">
+			<section>
+				<h2>Education</h2>
+				<p><b>Master's, Computer Science</b> · 2019 – 2021<br>Programming of embedded and mobile devices</p>
+				<p><b>Bachelor's, Computer Science</b> · 2015 – 2019</p>
+				<p class="stack">National Metallurgical Academy of Ukraine</p>
+			</section>
+			<section>
+				<h2>Languages</h2>
+				<p><b>Ukrainian</b> – native</p>
+				<p><b>English</b> – B1 (Intermediate); B2 in technical reading, writing and discussion</p>
+			</section>
+		</div>
+	</div>
+</body>
+
+</html>
