@@ -6,13 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mykola Andrieiev – Unity & Flutter Developer</title>
 	<meta name="description"
-		content="Mykola Andrieiev – Unity (C#) and Flutter developer with ~7 years of experience: games shipped on Steam, mobile games and cross-platform B2B apps.">
+		content="Mykola Andrieiev – Unity (C#) and Flutter developer with 5+ years of commercial experience: Snapchat multiplayer games, games shipped on Steam, mobile games and cross-platform B2B apps.">
 	<link rel="canonical" href="https://babiosik.github.io/">
 
 	<meta property="og:type" content="profile">
 	<meta property="og:title" content="Mykola Andrieiev – Unity & Flutter Developer">
 	<meta property="og:description"
-		content="~7 years of experience: games shipped on Steam, mobile games and cross-platform Flutter apps.">
+		content="5+ years of commercial experience: Snapchat multiplayer games, games shipped on Steam, mobile games and cross-platform Flutter apps.">
 	<meta property="og:url" content="https://babiosik.github.io/">
 	<meta property="og:image" content="https://babiosik.github.io/images/LongRiverTeam/grow-down-1.png">
 	<meta name="twitter:card" content="summary_large_image">
@@ -276,11 +276,9 @@
 			margin-bottom: .6rem;
 		}
 
-		.card-inner .desc:last-of-type {
-			border-bottom: 1px solid var(--accent);
-		}
-
 		.card-inner .stack {
+			padding-top: .6rem;
+			border-top: 1px solid var(--accent);
 			font-size: .85rem;
 			color: var(--sub);
 			margin-bottom: .8rem;
@@ -300,6 +298,45 @@
 
 		.card-inner li b {
 			color: #fff;
+		}
+
+		.item-head {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: baseline;
+			gap: .3rem .6rem;
+		}
+
+		.item-head .when {
+			font-size: .8rem;
+			color: var(--sub);
+		}
+
+		.item-head .badge {
+			font-size: .75rem;
+			font-weight: 600;
+			padding: 0 .55rem;
+			border-radius: 20px;
+			color: #66c0f4;
+			background: rgba(102, 192, 244, .12);
+			border: 1px solid rgba(102, 192, 244, .45);
+		}
+
+		.projects li p {
+			margin: .15rem 0 0;
+		}
+
+		.projects li {
+			margin-bottom: 1rem;
+		}
+
+		.edu p {
+			font-size: .9rem;
+		}
+
+		.edu .when {
+			color: var(--sub);
+			font-size: .85rem;
 		}
 
 		/* ---------- thumbnails ---------- */
@@ -516,8 +553,8 @@
 		<h1>Mykola Andrieiev</h1>
 		<p class="role">Unity (C#) & Flutter Developer</p>
 		<p class="summary">
-			Game and mobile developer with ~7 years of commercial experience. Shipped visual novels on Steam,
-			led four game teams in parallel, built a PvP puzzle game in a 20+ person product team and developed
+			Game and mobile developer with 5+ years of commercial experience, building games since 2018. Built multiplayer and AR games for Snapchat, worked on
+			8 visual novels released on Steam, led four game teams in parallel, built a PvP puzzle game in a 20+ person product team and developed
 			cross-platform Flutter apps with offline mode, GPS and camera. Strong in optimization, Addressables,
 			WebGL builds and third-party SDK integration.
 		</p>
@@ -540,10 +577,10 @@
 		<section aria-labelledby="highlights-title">
 			<h2 id="highlights-title">Highlights</h2>
 			<div class="highlights">
-				<div class="highlight"><strong>~7 years</strong><span>Unity (C#), Flutter, Android</span></div>
-				<div class="highlight"><strong>Steam releases</strong><span>Visual novels with mini-games, Steamworks</span></div>
+				<div class="highlight"><strong>5+ years</strong><span>Commercial: Unity (C#), Flutter, Android</span></div>
+				<div class="highlight"><strong>945M+ plays</strong><span>Multiplayer games on Snapchat</span></div>
+				<div class="highlight"><strong>8 Steam releases</strong><span>1,000+ player reviews, up to 86% positive</span></div>
 				<div class="highlight"><strong>Team lead</strong><span>Four teams in parallel at Octo Games</span></div>
-				<div class="highlight"><strong>Game jam winner</strong><span>1st place, “Best disclosure of the theme”</span></div>
 			</div>
 		</section>
 
@@ -557,7 +594,12 @@
 						<li>C#</li>
 						<li>Addressables</li>
 						<li>Naninovel</li>
+						<li>Ink</li>
+						<li>Zenject</li>
 						<li>Spine</li>
+						<li>Lens Studio (Snapchat AR)</li>
+						<li>JavaScript / TypeScript</li>
+						<li>Multiplayer</li>
 						<li>WebGL</li>
 						<li>Steamworks.NET</li>
 						<li>PrimeTween / DOTween</li>
@@ -603,6 +645,56 @@
 
 		<section aria-labelledby="experience-title">
 			<h2 id="experience-title">Experience</h2>
+			<article class="card active">
+				<button type="button" class="card-header" aria-expanded="true">
+					<h3>SplendidScore Ukraine <small>Game Developer · Remote</small></h3>
+					<span class="meta">Feb 2026 – Oct 2026<span class="chevron"></span></span>
+				</button>
+				<div class="card-body">
+					<div class="card-inner">
+						<p class="desc">
+							Developed AR lenses and social games played inside Snapchat: started with AR filters, moved
+							on to a turn-based chat game and then to real-time multiplayer games for groups of friends.
+						</p>
+						<p class="desc">
+							The three multiplayer games reached 945M+ plays combined. Brought AI-assisted development
+							tools into the team’s workflow.
+						</p>
+						<p class="stack">Stack: Snapchat Lens Studio, JavaScript / TypeScript, AR, multiplayer,
+							AI-assisted development.</p>
+						<ul class="projects">
+							<li>
+								<div class="item-head"><b>Color Match</b><span class="when">Multiplayer</span><span class="badge">905M+ plays</span></div>
+								<p>Race across colored platforms: when the timer runs out a color is called and every
+									platform of another color disappears.</p>
+								<div class="media" data-media="./images/SplendidScore/color-match.mp4"></div>
+							</li>
+							<li>
+								<div class="item-head"><b>Zombie Escape</b><span class="when">Multiplayer</span><span class="badge">29M+ plays</span></div>
+								<p>Zombie-infection game with asynchronous gameplay: one random player becomes the zombie
+									and has to catch and infect the others, while survivors run and hide.</p>
+								<div class="media" data-media="./images/SplendidScore/zombie-escape.mp4"></div>
+							</li>
+							<li>
+								<div class="item-head"><b>Gobble Watch</b><span class="when">Multiplayer</span><span class="badge">13M+ plays</span></div>
+								<p>Red light, green light on a straight track: players race toward a turkey and must freeze
+									whenever it turns around; anyone still moving is sent back to the start.</p>
+								<div class="media" data-media="./images/SplendidScore/gobble-watch.mp4"></div>
+							</li>
+							<li>
+								<div class="item-head"><b>Turn-based chat game</b></div>
+								<p>Battleship-style game played in a Snapchat chat: each player hides three animals on a
+									4×4 board, then players take turns guessing where the opponent’s animals are. Built in
+									1.5 months.</p>
+							</li>
+							<li>
+								<div class="item-head"><b>AR lenses</b></div>
+								<p>Created AR filters (Lenses) for Snapchat over the first month.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</article>
 
 			<article class="card active">
 				<button type="button" class="card-header" aria-expanded="true">
@@ -612,49 +704,69 @@
 				<div class="card-body">
 					<div class="card-inner">
 						<p class="desc">
-							Developed visual novels for Steam in Unity (C#). Owned all technical aspects of the games and
-							prepared release builds.
+							Developed narrative games for Steam in Unity (C#): visual novels with gameplay mini-games,
+							made for an adult (18+) audience. Owned all technical aspects of the games and prepared
+							release builds. Titles and store links available on request.
+						</p>
+						<p class="desc">
+							Eight titles shipped between Dec 2023 and Nov 2024, with 1,000+ Steam reviews combined;
+							the best-rated one holds 86% positive (“Very Positive”).
 						</p>
 						<p class="desc">
 							Led four teams working in parallel; tracked deadlines and workload of additional staff.
 						</p>
 						<p class="stack">
-							Stack: Unity (C#), Steamworks.NET, Naninovel, Addressables, Firebase, Amplitude, Node.js,
-							MongoDB, REST, PrimeTween / DOTween, physics, optimization.
+							Stack: Unity (C#), Steamworks.NET, Naninovel, Ink, Zenject, Addressables, Unity IAP, Firebase,
+							Amplitude, Node.js, MongoDB, REST, PrimeTween / DOTween, physics, optimization.
 						</p>
-						<ul>
-							<li><b>Lust Horizon</b> – collectible card game similar to Hearthstone. Integrated a
-								third-party SDK with Spine animations and a native bridge, built for WebGL, heavy
-								optimization with Addressables and multithreading.</li>
-							<li><b>Route to the West</b> – substantially improved the racing mini-games.
+						<ul class="projects">
+							<li>
+								<div class="item-head"><b>Collectible card game (WebGL)</b></div>
+								<p>Hearthstone-style card battler for the browser, built on Zenject (dependency injection) with in-app purchases. Story told through Ink in two formats: short visual-novel scenes with Spine animations, and chat-style dialogues with photo content and reply choices. Integrated a third-party SDK with Spine animations through a native bridge, shipped the WebGL build and pushed performance with Addressables and multithreading.</p>
+							</li>
+							<li>
+								<div class="item-head"><b>Sports-college visual novel</b><span class="when">Nov 2024</span><span class="badge">86% positive · Very Positive</span></div>
+								<p>Polished every core mechanic for release and built a basketball-match mini-game driven by rock-paper-scissors tactics.</p>
+								<div class="media" data-media="./images/OctoGames/college-1.jpg"></div>
+							</li>
+							<li>
+								<div class="item-head"><b>Road-trip visual novel</b><span class="when">Oct 2024</span></div>
+								<p>Substantially reworked and improved the racing mini-games.</p>
 								<div class="media" data-media="./images/OctoGames/route-1.mp4"></div>
 							</li>
-							<li><b>Sport College</b> – polished existing features.
-								<div class="media" data-media="./images/OctoGames/college-2.jpg"></div>
+							<li>
+								<div class="item-head"><b>Film-studio visual novel</b><span class="when">Jul 2024</span></div>
+								<p>Built and integrated a cooking mini-game.</p>
+								<div class="media" data-media="./images/OctoGames/camera-action-1.jpg, ./images/OctoGames/camera-action-2.mp4, ./images/OctoGames/camera-action-3.mp4"></div>
 							</li>
-							<li><b>Motor, Camera, Action!</b> – integrated a cooking mini-game.
-								<div class="media" data-media="
-									./images/OctoGames/camera-action-1.jpg,
-									./images/OctoGames/camera-action-2.mp4,
-									./images/OctoGames/camera-action-3.mp4"></div>
+							<li>
+								<div class="item-head"><b>Project template for all teams</b></div>
+								<p>Designed a new project template that every team I led used as the starting point for subsequent titles.</p>
 							</li>
-							<li><b>Hot Miami</b> – integrated a racing mini-game in the spirit of Gran Turismo.
+							<li>
+								<div class="item-head"><b>Racing-themed visual novel</b><span class="when">Jun 2024</span><span class="badge">84% positive · Very Positive</span></div>
+								<p>Integrated a Gran Turismo-inspired racing mini-game and added video calls to the in-game phone.</p>
 								<div class="media" data-media="./images/OctoGames/maiami-3.mp4"></div>
 							</li>
-							<li><b>Academy of the Shine</b> – implemented a new global “Phone” feature and a reputation
-								system.
+							<li>
+								<div class="item-head"><b>Family-drama visual novel</b><span class="when">May 2024</span></div>
+								<p>Combined and polished features from earlier titles, built the intro cinematic, added easter eggs and extended the in-game phone with wallpapers unlocked through achievements.</p>
+								<div class="media" data-media="./images/OctoGames/drama-1.jpg, ./images/OctoGames/drama-2.jpg"></div>
+							</li>
+							<li>
+								<div class="item-head"><b>School-life visual novel</b><span class="when">Apr 2024</span></div>
+								<p>Built the in-game “Phone” system, which was then extended and reused in every following visual novel. Also created a reputation system adopted across the whole company, not only my teams.</p>
 								<div class="media" data-media="./images/OctoGames/academy-4.mp4"></div>
 							</li>
-							<li><b>Detective in the Dark</b> – extended the engine to support Alan Wake-style
-								mini-games.
-								<div class="media" data-media="
-									./images/OctoGames/detective-1.jpg,
-									./images/OctoGames/detective-3.jpg,
-									./images/OctoGames/detective-5.mp4"></div>
+							<li>
+								<div class="item-head"><b>Detective visual novel</b><span class="when">Jan 2024</span></div>
+								<p>Extended the engine to support Alan Wake-style investigation mini-games.</p>
+								<div class="media" data-media="./images/OctoGames/detective-1.jpg, ./images/OctoGames/detective-3.jpg, ./images/OctoGames/detective-5.mp4"></div>
 							</li>
-							<li><b>Massage Room</b> – researched the Naninovel framework and introduced it into the
-								company's projects.
-								<div class="media" data-media="./images/OctoGames/massage-3.jpg"></div>
+							<li>
+								<div class="item-head"><b>Naninovel adoption</b><span class="when">Dec 2023</span></div>
+								<p>Researched the Naninovel framework and introduced it into the company’s pipeline; it became the engine of every subsequent visual novel.</p>
+								<div class="media" data-media="./images/OctoGames/naninovel-1.jpg"></div>
 							</li>
 						</ul>
 					</div>
@@ -720,6 +832,14 @@
 							<li><b>Tracker for agronomists</b> – a series of apps for tracking the progress of farm
 								fields and the state of machinery. Offline mode, dynamic forms, data synchronization,
 								camera, verification.</li>
+							<li><b>Delivery Groups</b> – app for creating and managing parcels. Fully rewrote
+								(refactored) the existing codebase; data synchronization, offline mode, map rendering, GPS.
+								<div class="media" data-media="
+									./images/WEZOM/delivery-group-1.jpg,
+									./images/WEZOM/delivery-group-2.jpg,
+									./images/WEZOM/delivery-group-3.jpg,
+									./images/WEZOM/delivery-group-4.jpg"></div>
+							</li>
 							<li><b>MyService</b> – booking app for car repair services. Dynamic forms, data
 								synchronization.
 								<div class="media" data-media="
@@ -729,7 +849,7 @@
 									./images/WEZOM/my-service-4.jpg"></div>
 							</li>
 							<li><b>Myastoria</b> – shopping catalog with recipes. Catalog screens, shopping cart,
-								payments, recipes, map of nearby stores.
+								payment integration, deep links, recipes, map of nearby stores.
 								<div class="media" data-media="
 									./images/WEZOM/myastoria-1.jpg,
 									./images/WEZOM/myastoria-2.jpg,
@@ -737,56 +857,11 @@
 									./images/WEZOM/myastoria-4.jpg,
 									./images/WEZOM/myastoria-5.jpg"></div>
 							</li>
-							<li><b>Delivery Groups</b> – app for creating and managing parcels. Data synchronization,
-								offline mode, map rendering, GPS.
-								<div class="media" data-media="
-									./images/WEZOM/delivery-group-1.jpg,
-									./images/WEZOM/delivery-group-2.jpg,
-									./images/WEZOM/delivery-group-3.jpg,
-									./images/WEZOM/delivery-group-4.jpg"></div>
-							</li>
 						</ul>
 					</div>
 				</div>
 			</article>
 
-			<article class="card">
-				<button type="button" class="card-header" aria-expanded="false">
-					<h3>Sandwich Inc. <small>Mobile Developer</small></h3>
-					<span class="meta">Aug 2018 – Aug 2021<span class="chevron"></span></span>
-				</button>
-				<div class="card-body">
-					<div class="card-inner">
-						<p class="desc">
-							In an indie team, developed casual and hyper-casual games in Unity (C#). Later moved to
-							Flutter and Node.js.
-						</p>
-						<p class="stack">Stack: Unity (C#), Flutter (Dart), Node.js, PostgreSQL, AdMob.</p>
-						<ul>
-							<li><b>Magic 8-Ball</b> – fun app that gives a random answer when you shake the phone.
-								Unity (C#): animations, physics, haptic feedback, AdMob.
-								<div class="media" data-media="
-									./images/SandwichInc/magic-8-ball-1.webp,
-									./images/SandwichInc/magic-8-ball-2.webp"></div>
-							</li>
-							<li><b>Coin Flip</b> – coin flipping game. Unity (C#): 3D coin physics, haptic feedback,
-								AdMob.</li>
-							<li><b>Bip WatchFace</b> – catalog of watch faces. Flutter (REST, Hive): smooth image
-								loading, offline gallery of favorites, like statistics.
-								<div class="media" data-media="./images/SandwichInc/bip-watch-face.webp"></div>
-							</li>
-							<li><b>Card BIN Checker</b> – utility app. Flutter (Dio, REST): integration with
-								third-party services via REST API.
-								<div class="media" data-media="
-									./images/SandwichInc/bin-card-checker-1.webp,
-									./images/SandwichInc/bin-card-checker-2.webp"></div>
-							</li>
-							<li><b>Telegram RPG</b> – text-based RPG in a Telegram bot. Node.js (Telegraf,
-								PostgreSQL): story branches, progress saving.</li>
-						</ul>
-					</div>
-				</div>
-			</article>
 
 			<article class="card">
 				<button type="button" class="card-header" aria-expanded="false">
@@ -795,8 +870,14 @@
 				</button>
 				<div class="card-body">
 					<div class="card-inner">
-						<p class="desc">Developed a fork of Telegram for Android: implemented new features and fixed
-							bugs.</p>
+						<p class="desc">Developed a fork of Telegram for Android in Java: implemented new features on top
+							of the official client and fixed bugs.</p>
+						<ul>
+							<li><b>Ghost mode</b> – reading chats without sending read receipts or online status.</li>
+							<li><b>Channel news feed</b> – a single feed aggregating posts from subscribed channels.</li>
+							<li><b>Chat folders as tabs</b> – tabbed chat list, shipped before the official Telegram
+								client introduced folders.</li>
+						</ul>
 						<p class="stack">Stack: Java, Android SDK, Android Studio.</p>
 					</div>
 				</div>
@@ -804,19 +885,49 @@
 		</section>
 
 		<section aria-labelledby="projects-title">
-			<h2 id="projects-title">Projects & Achievements</h2>
+			<h2 id="projects-title">Indie & Side Projects</h2>
+			<article class="card">
+				<button type="button" class="card-header" aria-expanded="false">
+					<h3>Sandwich Inc. <small>Indie team · side projects alongside studies and work</small></h3>
+					<span class="meta">2018 – 2021<span class="chevron"></span></span>
+				</button>
+				<div class="card-body">
+					<div class="card-inner">
+						<p class="desc">
+							Small indie team I co-ran outside of university and, later, my main job. Built and published
+							our own apps on Google Play end to end: development, store release and ad monetization
+							(US$700+ in AdMob revenue).
+						</p>
+						<p class="stack">Stack: Unity (C#), Flutter (Dart), REST, Hive, AdMob.</p>
+						<ul>
+							<li><b>Magic 8-Ball</b> – 20,000+ downloads. Unity (C#) app that gives a random answer when you
+								shake the phone: animations, physics, haptic feedback, AdMob. Also made a Coin Flip game on
+								the same base.
+								<div class="media" data-media="
+									./images/SandwichInc/magic-8-ball-1.webp,
+									./images/SandwichInc/magic-8-ball-2.webp"></div>
+							</li>
+							<li><b>Bip WatchFace</b> – 5,000+ downloads. Flutter catalog of watch faces (REST, Hive):
+								smooth image loading, offline gallery of favorites, like statistics.
+								<div class="media" data-media="./images/SandwichInc/bip-watch-face.webp"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</article>
 
 			<article class="card">
 				<button type="button" class="card-header" aria-expanded="false">
 					<h3>Grow Down <small>Game jam · LongRiver Team · 1st place “Best disclosure of the theme”</small>
 					</h3>
-					<span class="meta">Mar 2023 – Apr 2023<span class="chevron"></span></span>
+					<span class="meta">Feb 2023 – Apr 2023<span class="chevron"></span></span>
 				</button>
 				<div class="card-body">
 					<div class="card-inner">
 						<p class="desc">
-							Hypnotic root simulator made in Unity (C#) during a game jam. Fully responsible for all
-							mechanics, procedural level generation, FPS optimization and 2D physics.
+							Hypnotic root simulator in Unity (C#). Built in a one-week game jam in late February 2023, where it
+							took 1st place, then developed for two more months into a fuller release. Fully responsible
+							for all mechanics, procedural level generation, FPS optimization and 2D physics.
 						</p>
 						<p class="stack">Stack: Unity (C#), 2D Physics, ScriptableObjects, Object Pooling, Profiler.
 						</p>
@@ -836,6 +947,21 @@
 					</div>
 				</div>
 			</article>
+		</section>
+		<section aria-labelledby="education-title">
+			<h2 id="education-title">Education</h2>
+			<div class="skills">
+				<div class="skill-group edu">
+					<h3>Master's degree, Computer Science</h3>
+					<p>National Metallurgical Academy of Ukraine</p>
+					<p class="when">Sep 2019 – Feb 2021 · Programming of embedded and mobile devices</p>
+				</div>
+				<div class="skill-group edu">
+					<h3>Bachelor's degree, Computer Science</h3>
+					<p>National Metallurgical Academy of Ukraine</p>
+					<p class="when">Sep 2015 – May 2019</p>
+				</div>
+			</div>
 		</section>
 	</main>
 
