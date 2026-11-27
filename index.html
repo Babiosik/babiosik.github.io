@@ -300,6 +300,36 @@
 			color: #fff;
 		}
 
+		.item-head {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: baseline;
+			gap: .3rem .6rem;
+		}
+
+		.item-head .when {
+			font-size: .8rem;
+			color: var(--sub);
+		}
+
+		.item-head .badge {
+			font-size: .75rem;
+			font-weight: 600;
+			padding: 0 .55rem;
+			border-radius: 20px;
+			color: #66c0f4;
+			background: rgba(102, 192, 244, .12);
+			border: 1px solid rgba(102, 192, 244, .45);
+		}
+
+		.projects li p {
+			margin: .15rem 0 0;
+		}
+
+		.projects li {
+			margin-bottom: 1rem;
+		}
+
 		/* ---------- thumbnails ---------- */
 		.media {
 			display: flex;
@@ -625,46 +655,49 @@
 							Stack: Unity (C#), Steamworks.NET, Naninovel, Addressables, Firebase, Amplitude, Node.js,
 							MongoDB, REST, PrimeTween / DOTween, physics, optimization.
 						</p>
-						<ul>
-							<li><b>Collectible card game (WebGL)</b> – Hearthstone-style card battler. Integrated a
-								third-party SDK with Spine animations and a native bridge, built for WebGL, heavy
-								optimization with Addressables and multithreading.</li>
-							<li><b>Road-trip visual novel</b> – substantially improved the racing mini-games.
-								<div class="media" data-media="./images/OctoGames/route-1.mp4"></div>
+						<ul class="projects">
+							<li>
+								<div class="item-head"><b>Collectible card game (WebGL)</b></div>
+								<p>Hearthstone-style card battler for the browser. Integrated a third-party SDK with Spine animations through a native bridge, shipped the WebGL build and pushed performance with Addressables and multithreading.</p>
 							</li>
-							<li><b>Sports-college visual novel</b> (86% positive on Steam) – polished existing features.
+							<li>
+								<div class="item-head"><b>Sports-college visual novel</b><span class="when">Nov 2024</span><span class="badge">86% positive · Very Positive</span></div>
+								<p>Polished every core mechanic for release and built a basketball-match mini-game driven by rock-paper-scissors tactics.</p>
 								<div class="media" data-media="./images/OctoGames/college-1.jpg"></div>
 							</li>
-							<li><b>Film-studio visual novel</b> – integrated a cooking mini-game.
-								<div class="media" data-media="
-									./images/OctoGames/camera-action-1.jpg,
-									./images/OctoGames/camera-action-2.mp4,
-									./images/OctoGames/camera-action-3.mp4"></div>
+							<li>
+								<div class="item-head"><b>Road-trip visual novel</b><span class="when">Oct 2024</span></div>
+								<p>Substantially reworked and improved the racing mini-games.</p>
+								<div class="media" data-media="./images/OctoGames/route-1.mp4"></div>
 							</li>
-							<li><b>Racing-themed visual novel</b> (84% positive on Steam) – integrated a racing mini-game in
-								the spirit of Gran Turismo.
+							<li>
+								<div class="item-head"><b>Film-studio visual novel</b><span class="when">Jul 2024</span></div>
+								<p>Built and integrated a cooking mini-game.</p>
+								<div class="media" data-media="./images/OctoGames/camera-action-1.jpg, ./images/OctoGames/camera-action-2.mp4, ./images/OctoGames/camera-action-3.mp4"></div>
+							</li>
+							<li>
+								<div class="item-head"><b>Racing-themed visual novel</b><span class="when">Jun 2024</span><span class="badge">84% positive · Very Positive</span></div>
+								<p>Integrated a Gran Turismo-inspired racing mini-game.</p>
 								<div class="media" data-media="./images/OctoGames/maiami-3.mp4"></div>
 							</li>
-							<li><b>School-life visual novel</b> – implemented a new global “Phone” feature and a reputation
-								system.
+							<li>
+								<div class="item-head"><b>Family-drama visual novel</b><span class="when">May 2024</span></div>
+								<p>Combined and polished features from earlier titles, built the intro cinematic, added easter eggs and extended the in-game phone with wallpapers unlocked through achievements.</p>
+								<div class="media" data-media="./images/OctoGames/drama-1.jpg, ./images/OctoGames/drama-2.jpg"></div>
+							</li>
+							<li>
+								<div class="item-head"><b>School-life visual novel</b><span class="when">Apr 2024</span></div>
+								<p>Implemented a new global in-game “Phone” feature and a reputation system.</p>
 								<div class="media" data-media="./images/OctoGames/academy-4.mp4"></div>
 							</li>
-							<li><b>Family-drama visual novel</b> – combined and polished features from earlier titles,
-								built the intro cinematic, added easter eggs and extended the in-game phone with
-								wallpapers unlocked through achievements.
-								<div class="media" data-media="
-									./images/OctoGames/drama-1.jpg,
-									./images/OctoGames/drama-2.jpg"></div>
+							<li>
+								<div class="item-head"><b>Detective visual novel</b><span class="when">Jan 2024</span></div>
+								<p>Extended the engine to support Alan Wake-style investigation mini-games.</p>
+								<div class="media" data-media="./images/OctoGames/detective-1.jpg, ./images/OctoGames/detective-3.jpg, ./images/OctoGames/detective-5.mp4"></div>
 							</li>
-							<li><b>Detective visual novel</b> – extended the engine to support Alan Wake-style
-								mini-games.
-								<div class="media" data-media="
-									./images/OctoGames/detective-1.jpg,
-									./images/OctoGames/detective-3.jpg,
-									./images/OctoGames/detective-5.mp4"></div>
-							</li>
-							<li><b>Naninovel adoption</b> – researched the Naninovel framework and introduced it into
-								the company's projects.
+							<li>
+								<div class="item-head"><b>Naninovel adoption</b><span class="when">Dec 2023</span></div>
+								<p>Researched the Naninovel framework and rolled it out across the company’s projects.</p>
 								<div class="media" data-media="./images/OctoGames/naninovel-1.jpg"></div>
 							</li>
 						</ul>
